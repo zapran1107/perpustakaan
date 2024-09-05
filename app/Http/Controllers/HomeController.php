@@ -1,7 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Home;
+use App\Models\Buku;
+use App\Models\Penerbit;
+use App\Models\Penulis;
+use App\Models\kategori;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $jumlahbuku = Buku::count();
+        $jumlahpenerbit = Penerbit::count();
+        $jumlahpenulis = Penulis::count();
+        $jumlahkategori = Kategori::count();
+        return view('dashboard', compact('jumlahbuku','jumlahpenerbit','jumlahpenulis','jumlahkategori'));
     }
 }

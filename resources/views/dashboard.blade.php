@@ -13,15 +13,14 @@
               <div class="row align-items-center">
                 <div class="col-icon">
                   <div
-                    class="icon-big text-center icon-primary bubble-shadow-small"
-                  >
+                    class="icon-big text-center icon-primary bubble-shadow-small">
                     <i class="fas fa-users"></i>
                   </div>
                 </div>
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
-                    <p class="card-category">Visitors</p>
-                    <h4 class="card-title">1,294</h4>
+                    <p class="card-category">buku</p>
+                    {{$jumlahbuku}}
                   </div>
                 </div>
               </div>
@@ -41,8 +40,8 @@
                 </div>
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
-                    <p class="card-category">Subscribers</p>
-                    <h4 class="card-title">1303</h4>
+                    <p class="card-category">kategori</p>
+                    {{$jumlahkategori}}
                   </div>
                 </div>
               </div>
@@ -62,8 +61,8 @@
                 </div>
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
-                    <p class="card-category">Sales</p>
-                    <h4 class="card-title">$ 1,345</h4>
+                    <p class="card-category">penerbit</p>
+                    {{$jumlahpenerbit}}
                   </div>
                 </div>
               </div>
@@ -83,8 +82,8 @@
                 </div>
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
-                    <p class="card-category">Order</p>
-                    <h4 class="card-title">576</h4>
+                    <p class="card-category">penulis</p>
+                    {{$jumlahpenulis}}
                   </div>
                 </div>
               </div>

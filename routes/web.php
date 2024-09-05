@@ -3,6 +3,8 @@ use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PenulisController;
 use App\Http\Controllers\PenerbitController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\HomeController;
 use App\Http\Dashboard;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user', function () {
-    return view('welcome');
-});
+// Route::get('/user', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -29,6 +31,9 @@ Route::resource('penulis', PenulisController::class);
 Route::resource('buku', BukuController::class);
 Route::resource('penerbit', PenerbitController::class);
 Route::resource('kategori', kategoriController::class);
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+Route::resource('dashboard', HomeController::class);
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// });
+
+Route::get('user',[FrontendController::class, 'index']);

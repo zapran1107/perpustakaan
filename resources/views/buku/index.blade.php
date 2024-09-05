@@ -20,9 +20,9 @@
                 <th scope="col">NO</th>
                 <th scope="col">JUDUL</th>
                  <th scope="col">jumlah</th>
-                 <th scope="col">ID PENULIS</th>
-                <th scope="col">ID PENERBIT</th>
-                <th scope="col">ID KATEGORI</th>
+                 <th scope="col">PENULIS</th>
+                <th scope="col">PENERBIT</th>
+                <th scope="col">KATEGORI</th>
                 <th scope="col">TAHUN TERBIT</th>
                 <th scope="col">foto</th>
                 <th scope="col">AKSI</th>
@@ -35,9 +35,9 @@
                <th scope="row">{{ $no++ }}</th>
                <td>{{ $data->judul}}</td>
                <td>{{ $data->jumlah}}</td>
-               <td>{{ $data->id_penulis}}</td>
-               <td>{{ $data->id_penerbit}}</td>
-               <td>{{ $data->id_kategori}}</td>
+               <td>{{ $data->penerbit->nama_penerbit}}</td>
+               <td>{{ $data->penerbit->nama_penerbit}}</td>
+               <td>{{ $data->kategori->nama_kategori }}</td>
                <td>{{ $data->tahun_terbit}}</td>
                <td>
                 <img src=" {{ asset('/images/buku/' . $data->foto)}}" width="100">
