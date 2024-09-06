@@ -37,3 +37,4 @@ Route::resource('dashboard', HomeController::class);
 // });
 
 Route::get('user',[FrontendController::class, 'index']);
+Route::get('show/{id}',[FrontendController::class, 'show']);

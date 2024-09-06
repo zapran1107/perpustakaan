@@ -221,7 +221,7 @@
 
       <!-- sidebar-menu-area -->
       <div class="tpsideinfo">
-         <button class="tpsideinfo__close">Close<i class="fal fa-times ml-10"></i></button>
+
          <div class="tpsideinfo__search text-center pt-35">
             <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
             <form action="#">
@@ -281,28 +281,7 @@
                             <div class="modal-header">
                                 <h5 class="modal-title" id="detailModalLabel{{ $data->id }}">
                                     {{ $data->judul }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="{{ asset('/images/buku/' . $data->foto) }}" class="img-fluid mb-3"
-                                            alt="{{ $data->judul }}">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <p><strong>Judul : </strong> {{ $data->judul }}</p>
-                                        <p><strong>jumlah : </strong> {{ $data->jumlah }}</p>
-                                        <p><strong>Nama penulis : </strong> {{ $data->penulis->nama_penulis }}</p>
-                                        <p><strong>Nama penerbit : </strong> {{ $data->penerbit->nama_penerbit }}</p>
-                                        <p><strong>Nama kategori : </strong> {{ $data->kategori ->nama_kategori }}</p>
-                                        <p><strong>Tahun Terbit : </strong> {{ $data->tahun_terbit }}</p>
-                                        <p><strong>foto : </strong> {{ $data->foto }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
                             </div>
                         </div>
                     </div>
@@ -400,11 +379,12 @@
                                     {{-- {{$data->deskripsi}} --}}
                                 </p>
                             </div>
-                            <a href="{{ url('show' , $data->id) }}" type="button" class="btn btn-primary px-4 mx-auto mb-4" >Lihat Detail</a>
+                            <a href="{{ url('show' , $data->id) }}" class="btn btn-primary px-4 mx-auto mb-4" >Lihat Detail</a>
                         </div>
                     </div>
                     @endforeach
 
+                    
                 </div>
             </div>
         </div>

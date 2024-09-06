@@ -33,7 +33,7 @@
               href="#dashboard"
               class="collapsed"
               aria-expanded="false">
-              
+
               <i class="fas fa-home"></i>
               <p>Dashboard</p>
               <span class="caret"></span>
@@ -67,6 +67,12 @@
                           <i class="fas fa-layer-group"></i>
                           <p>kategori</p>
                         </a>
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="material-icons-outlined"></i>Logout</a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
             <div class="collapse" id="submenu">
               <ul class="nav nav-collapse">
                 <li>
