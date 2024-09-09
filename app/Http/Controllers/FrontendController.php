@@ -15,6 +15,9 @@ class FrontendController extends Controller
         $buku = Buku::findOrFail($id);
         return view('user.show',compact('buku'));
     }
+    public function profile(){
+        $buku = Buku::all();
+        return view('user.profile',compact('buku'));
+    }
 
-    
 }

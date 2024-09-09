@@ -44,7 +44,7 @@
   <body>
     <div class="wrapper">
       <!-- Sidebar -->
-        @include('include.sidebar')
+        @include('includeuser.profile.sidebar')
       <!-- End Sidebar -->
 
       <div class="main-panel">
@@ -75,7 +75,7 @@
             <!-- End Logo Header -->
           </div>
           <!-- Navbar Header -->
-          @include('include.navbar')
+          {{-- @include('include.navbar') --}}
           <!-- End Navbar -->
         </div>
 

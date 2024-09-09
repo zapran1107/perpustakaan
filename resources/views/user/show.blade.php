@@ -133,9 +133,6 @@
          <div class="container-fluid pt-5">
             <div class="container">
                 <div class="text-center pb-2">
-                    <p class="section-title px-5">
-                        <span class="px-2">Buku Terbaru</span>
-                    </p>
                     <h1 class="mb-4">Buku</h1>
                 </div>
                 <div class="row">
@@ -153,6 +150,7 @@
                                             <p class="m-0'">
                                                 Buku{{$buku->judul}} lengkap. Buku {{$buku->judul}} yang ditulis oleh {{$buku->penuli->nama_penulis}}. Informasi selengkapnya mengenai Buku {{$buku->judul}} ada bawah ini.
                                             </p>
+                                            <h1>hallo</h1>
                                             <div class="row">
                                                 <div class="col-lg-4 col-md-6 pb-1">
                                                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4">
@@ -168,7 +166,7 @@
                                                     <p>Sinopsis : {{$buku->deskripsi}}</p>
                                                 </div>
                                             </div>
-                                            <a href="{{route('AssalaamPerpustakaan')}}" class="btn btn-primary px-4 float-end mb-4 mr-5">Kembali</a>
+                                            <a href="{{route('user')}}" class="btn btn-primary px-4 float-end mb-4 mr-5">Kembali</a>
                                         </div>
                                     </div>
                                 </div>
@@ -196,87 +194,7 @@
          <!-- category-area-end -->
 
          <!-- product-area-start -->
-         <section class="product-area pt-95 pb-70">
 
-
-               </div>
-               <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
-                     <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-sale" role="tabpanel" aria-labelledby="nav-sale-tab">
-                     <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-17.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-18.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                              <div class="tpproduct__content">
-                                 <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
-                                 <div class="tpproduct__priceinfo p-relative">
-                                    <div class="tpproduct__priceinfo-list">
-                                       <span>$31.00</span>
-                                       <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
-                                    </div>
-                                    <div class="tpproduct__cart">
-                                       <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-19.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-20.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                              <div class="tpproduct__content">
-                                 <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
-                                 <div class="tpproduct__priceinfo p-relative">
-                                    <div class="tpproduct__priceinfo-list">
-                                       <span>$31.00</span>
-                                    </div>
-                                    <div class="tpproduct__cart">
-                                       <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-1.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-2.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        </div>
-         </section>
          <!-- product-area-end -->
 
          <!-- deal-product-area-start -->

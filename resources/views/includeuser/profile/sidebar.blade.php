@@ -1,4 +1,4 @@
-<div class="sidebar" data-background-color="dark">
+\<div class="sidebar" data-background-color="dark">
     <div class="sidebar-logo">
       <!-- Logo Header -->
       <div class="logo-header" data-background-color="dark">
@@ -33,12 +33,10 @@
               href="#dashboard"
               class="collapsed"
               aria-expanded="false">
-
               <i class="fas fa-home"></i>
               <p>Dashboard</p>
               <span class="caret"></span>
             </a>
-
           </li>
           <li class="nav-section">
             <span class="sidebar-mini-icon">
@@ -46,40 +44,27 @@
             </span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="{{route ('penulis.index')}}">
+            <a class="nav-link" href="">
               <i class="fas fa-layer-group"></i>
-              <p>PENULIS</p>
+              <p>PEMINJAMAN</p>
             </a>
-
             <li class="nav-item menu-items">
-                <a class="nav-link" href="{{route ('buku.index')}}">
+                <a class="nav-link" href="">
                   <i class="fas fa-layer-group"></i>
-                  <p>Buku</p>
+                  <p>PROFILE</p>
                 </a>
-
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="{{route ('penerbit.index')}}">
-                      <i class="fas fa-layer-group"></i>
-                      <p>penerbit</p>
-                    </a>
-                    <li class="nav-item menu-items">
-                        <a class="nav-link" href="{{route ('kategori.index')}}">
-                          <i class="fas fa-layer-group"></i>
-                          <p>kategori</p>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="material-icons-outlined"></i>Logout</a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                             <div class="collapse" id="submenu">
-                                 <ul class="nav nav-collapse">
-                                <li>
-                                <div class="collapse" id="subnav1">
-                               <ul class="nav nav-collapse subnav">
-                              <li>
-                          </li>
+                 <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                 <i class="material-icons-outlined"></i>Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                 @csrf
+                </form>
+            <div class="collapse" id="submenu">
+              <ul class="nav nav-collapse">
+                <li>
+                  <div class="collapse" id="subnav1">
+                    <ul class="nav nav-collapse subnav">
+                      <li>
+                      </li>
                       <li>
                       </li>
                     </ul>

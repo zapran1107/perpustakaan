@@ -4,6 +4,7 @@ use App\Http\Controllers\PenulisController;
 use App\Http\Controllers\PenerbitController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\HomeController;
 use App\Http\Dashboard;
 use Illuminate\Support\Facades\Route;
@@ -37,4 +38,6 @@ Route::resource('dashboard', HomeController::class);
 // });
 
 Route::get('user',[FrontendController::class, 'index']);
-Route::get('show/{id}',[FrontendController::class, 'show']);
+    Route::get('show/{id}',[FrontendController::class, 'show']);
+    Route::get('peminjaman',[PeminjamanController::class, 'index']);
+    Route::get('profile',[FrontendController::class, 'profile'])->name('profile');
