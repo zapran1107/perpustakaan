@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png')}}">
+      <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/img/logo/favicon.png')}}">
 
       <!-- CSS here -->
       <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css')}}">
@@ -50,7 +50,7 @@
             </div>
          </div>
 
-         <div class="main-menu-area mt-20 d-none d-xl-block">
+         {{-- <div class="main-menu-area mt-20 d-none d-xl-block">
             <div class="for-megamenu p-relative">
                <div class="container">
                   <div class="row align-items-center">
@@ -106,7 +106,7 @@
                   </div>
                </div>
             </div>
-         </div>
+         </div> --}}
       </header>
       <!-- header-area-end -->
 
@@ -116,19 +116,9 @@
             <div class="row align-items-center">
                <div class="col-xl-2 col-lg-3">
                   <div class="logo">
-                     <a href="index.html"><img src="{{ asset('frontend/assets/img/logo-custom.png')}}" alt="logo"></a>
-                  </div>
-               </div>
-               <div class="col-xl-6 col-lg-6">
-                  <div class="main-menu">
-                     <nav>
-                        <ul>
-
-
-                        </ul>
-                     </nav>
-                  </div>
-               </div>
+                     <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/c-logo.png')}}" alt="logo"></a>
+                  </div>    
+                </div>
                <div class="col-xl-4 col-lg-9">
                   <div class="header-meta-info d-flex align-items-center justify-content-end">
                      <div class="header-meta__social  d-flex align-items-center">
@@ -255,7 +245,7 @@
       <!-- sidebar-menu-area-end -->
 
       <!-- header-cart-start -->
-      <div class="tpcartinfo tp-cart-info-area p-relative">
+      {{-- <div class="tpcartinfo tp-cart-info-area p-relative">
       <button class="tpcart__close"><i class="fal fa-times"></i></button>
       <div class="tpcart">
          <h4 class="tpcart__title">Your Cart</h4>
@@ -284,199 +274,17 @@
 
       </div>
       </div>
-      <div class="cartbody-overlay"></div>
+      <div class="cartbody-overlay"></div> --}}
       <!-- header-cart-end -->
 
       <!-- main-area-start -->
-      <main>
-
-         <!-- slider-area-start -->
-         <section class="slider-area pb-25">
-            <div class="container">
-               <div class="row justify-content-xl-end">
-                  <div class="col-xl-9 col-xxl-7 col-lg-9">
-                     <div class="tp-slider-area p-relative">
-                        <div class="swiper-container slider-active">
-                           <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                 <div class="tp-slide-item">
-
-                                    <div class="tp-slide-item__img">
-                                       <img src="{{ asset('frontend/assets/img/slider/banner-1.jpg')}}" alt="">
-                                    </div>
-                                 </div>
-                                </div>
-                           </div>
-                        </div>
-                        <div class="slider-pagination"></div>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-xxl-3 col-lg-3">
-                     <div class="row">
-                        <div class="col-lg-12 col-md-6">
-                           <div class="tpslider-banner tp-slider-sm-banner mb-30">
-                              <a href="shop-details.html">
-                                 <div class="tpslider-banner__img">
-                                    <img src="{{ asset('/images/buku/' . $data->foto ) }}" class="img-fluid mb-3" style="height: 250px"
-                                    alt="{{ $data->judul }}">
-                                    <div class="tpslider-banner__content">
-                                    </div>
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="col-lg-12 col-md-6">
-                           <div class="tpslider-banner">
-                              <a href="shop-details.html">
-                                 <div class="tpslider-banner__img">
-                                    <img src="{{ asset('/images/buku/' . $data->foto) }}" class="img-fluid mb-3" style="height: 250px"
-                                    alt="{{ $data->judul }}">
-                                    <div class="tpslider-banner__content">
-                                       <span class="tpslider-banner__sub-title">Popular</span>
-                                       <h4 class="tpslider-banner__title">Energy with our <br> newest collection</h4>
-                                    </div>
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <div class="container-fluid pt-5">
-            <div class="container">
-                <div class="text-center pb-2">
-                    <p class="section-title px-5">
-                        <span class="px-2">Buku Terbaru</span>
-                    </p>
-                    <h1 class="mb-4">Buku</h1>
-                </div>
+       <main class="main-wrapper">
+            <div class="main-content">
                 <div class="row">
-                    @php
-                    $limitedbuku = $buku ->take(4)
-                    @endphp
-                    @foreach ($limitedbuku as $data )
-                    <div class="col-lg-3 mb-5">
-                        <div class="card border-0 bg-light shadow-sm pb-2">
-                            <a href="{{ url('show' , $data->id) }}" >
-                                <img src="{{ asset('images/buku/' . $data->foto) }}" alt="" class="card-img-top" alt="..." width="50" height="350">
-                            </a>
-                            <div class="card-body text-center">
-                                <h4 class="card-title">{{$data->judul}}</h4>
-                                <p class="card-text">
-                                    {{-- {{$data->deskripsi}} --}}
-                                </p>
-                            </div>
-                            <a href="{{ url('show' , $data->id) }}" class="btn btn-primary px-4 mx-auto mb-4" >Lihat Detail</a>
-                        </div>
-                    </div>
-                    @endforeach
-
-
+                    @yield('content')
                 </div>
             </div>
-        </div>
-         <!-- slider-area-end -->
-
-         <!-- category-area-start -->
-
-         <!-- category-area-end -->
-
-         <!-- product-area-start -->
-         <section class="product-area pt-95 pb-70">
-
-
-               </div>
-               <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
-                     <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-sale" role="tabpanel" aria-labelledby="nav-sale-tab">
-                     <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-17.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-18.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                              <div class="tpproduct__content">
-                                 <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
-                                 <div class="tpproduct__priceinfo p-relative">
-                                    <div class="tpproduct__priceinfo-list">
-                                       <span>$31.00</span>
-                                       <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
-                                    </div>
-                                    <div class="tpproduct__cart">
-                                       <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-19.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-20.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                              <div class="tpproduct__content">
-                                 <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
-                                 <div class="tpproduct__priceinfo p-relative">
-                                    <div class="tpproduct__priceinfo-list">
-                                       <span>$31.00</span>
-                                    </div>
-                                    <div class="tpproduct__cart">
-                                       <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-1.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-2.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        </div>
-         </section>
-         <!-- product-area-end -->
-
-         <!-- deal-product-area-start -->
-
-         <!-- deal-product-area-end -->
-
-         <!-- shop-area-start -->
-
-         <!-- shop-area-end -->
-
-      </main>
-      <!-- main-area-end -->
+        </main>
 
       <!-- footer-area-start -->
       <footer>

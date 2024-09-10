@@ -60,6 +60,7 @@ class BukuController extends Controller
         $buku->id_kategori= $request->id_kategori ;
         $buku->tahun_terbit= $request->tahun_terbit ;
         $buku->jumlah= $request->jumlah ;
+        $buku->sinopsis= $request->sinopsis ;
 
         // update img
         if ($request->hasFile('foto')) {
@@ -116,6 +117,7 @@ class BukuController extends Controller
         $buku->id_kategori= $request->id_kategori ;
         $buku->tahun_terbit= $request->tahun_terbit ;
         $buku->jumlah= $request->jumlah;
+        $buku->sinopsis= $request->sinopsis ;
 
         // delete img
         if ($request->hasFile('foto')) {

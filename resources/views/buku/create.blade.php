@@ -50,6 +50,10 @@
                         <input type="file" class="form-control" name="foto">
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">sinopsis</label>
+                        <input type="text" class="form-control" name="sinopsis">
+                    </div>
                         <button type="submit" class="btn btn-primary">GASKEUN CLEK</button>
                     </form>
                 </div>

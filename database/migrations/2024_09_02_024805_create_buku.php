@@ -22,6 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_kategori');
             $table->date('tahun_terbit');
             $table->string('foto');
+            $table->string('sinopsis');
             $table->timestamps();
 
             // $table->foreign('id_penulis')->references('id')->on('penulis')->onDelete('cascade');

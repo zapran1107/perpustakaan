@@ -28,15 +28,8 @@
       <div class="sidebar-content">
         <ul class="nav nav-secondary">
           <li class="nav-item active">
-            <a
-              data-bs-toggle="collapse"
-              href="#dashboard"
-              class="collapsed"
-              aria-expanded="false">
-
-              <i class="fas fa-home"></i>
-              <p>Dashboard</p>
-              <span class="caret"></span>
+            <a class="nav-link" href="">
+                <P>DASHBOARD</P>
             </a>
 
           </li>
@@ -54,21 +47,21 @@
             <li class="nav-item menu-items">
                 <a class="nav-link" href="{{route ('buku.index')}}">
                   <i class="fas fa-layer-group"></i>
-                  <p>Buku</p>
+                  <p>BUKU</p>
                 </a>
 
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="{{route ('penerbit.index')}}">
                       <i class="fas fa-layer-group"></i>
-                      <p>penerbit</p>
+                      <p>PENERBIT</p>
                     </a>
                     <li class="nav-item menu-items">
                         <a class="nav-link" href="{{route ('kategori.index')}}">
                           <i class="fas fa-layer-group"></i>
-                          <p>kategori</p>
+                          <p>KATEGORI</p>
                         </a>
                         <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="material-icons-outlined"></i>Logout</a>
+                            <i class="material-icons-outlined"></i>LOGOUT</a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf

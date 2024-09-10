@@ -39,5 +39,5 @@ Route::resource('dashboard', HomeController::class);
 
 Route::get('user',[FrontendController::class, 'index']);
     Route::get('show/{id}',[FrontendController::class, 'show']);
-    Route::get('peminjaman',[PeminjamanController::class, 'index']);
+    Route::resource('peminjaman', PeminjamanController::class);
     Route::get('profile',[FrontendController::class, 'profile'])->name('profile');

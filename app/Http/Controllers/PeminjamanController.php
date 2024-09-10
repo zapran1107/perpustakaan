@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Peminjaman;
+use App\Models\peminjamen;
 use App\Models\Buku;
 use App\Models\User;
 use Carbon\Carbon;
@@ -18,7 +18,7 @@ class PeminjamanController extends Controller
     public function index()
     {
         {
-            $peminjaman = Peminjaman::orderBy('id', 'desc')->get();
+            $peminjaman = peminjamen::orderBy('id', 'desc')->get();
             return view('user.peminjaman.index', compact('peminjaman'));
         }
     }
@@ -56,7 +56,7 @@ class PeminjamanController extends Controller
 
 
 
-        $peminjaman = new Peminjaman();
+        $peminjaman = new peminjamen();
         $peminjaman->nama_peminjam = $request->nama_peminjam;
         $peminjaman->id_buku = $request->id_buku;
         $peminjaman->jumlah = $request->jumlah;
@@ -86,7 +86,7 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Peminjaman $peminjaman)
+    public function edit(peminjamen $peminjaman)
     {
         $buku = Buku::all();
         return view('user.peminjaman.edit', compact('peminjaman','buku'));
@@ -100,7 +100,7 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Peminjaman $peminjaman)
+    public function update(Request $request, peminjamen $peminjaman)
     {
 
         $peminjaman->nama_peminjam = $request->nama_peminjam;

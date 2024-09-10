@@ -27,24 +27,18 @@
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
       <div class="sidebar-content">
         <ul class="nav nav-secondary">
-          <li class="nav-item active">
-            <a
-              data-bs-toggle="collapse"
-              href="#dashboard"
-              class="collapsed"
-              aria-expanded="false">
-              <i class="fas fa-home"></i>
-              <p>Dashboard</p>
-              <span class="caret"></span>
-            </a>
-          </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="{{ route('profile')}}">
+                  <i class="fas fa-layer-group"></i>
+                  <p>Dashboard</p>
+                </a>
           <li class="nav-section">
             <span class="sidebar-mini-icon">
               <i class="fa fa-ellipsis-h"></i>
             </span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('peminjaman.index')}}">
               <i class="fas fa-layer-group"></i>
               <p>PEMINJAMAN</p>
             </a>

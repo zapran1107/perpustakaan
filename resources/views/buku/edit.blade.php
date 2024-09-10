@@ -70,6 +70,12 @@
                     </div>
                 </div>
 
+                <div class="col-md-4x">
+                    <label for="input13" class="form-label">sinopsis</label>
+                    <div class="position-relative">
+                        <input class="form-control mb-3" type="text" name="sinopsis" placeholder="sinopsis" value="{{$buku->sinopsis}}" required>
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <div class="d-md-flex d-grid align-items-center gap-3">
                         <a href="{{route('buku.index')}}" class="btn btn-danger px-4">Batal</a>
