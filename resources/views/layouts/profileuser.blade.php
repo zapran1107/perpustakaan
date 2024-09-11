@@ -75,7 +75,7 @@
             <!-- End Logo Header -->
           </div>
           <!-- Navbar Header -->
-          {{-- @include('include.navbar') --}}
+          @include('includeuser.profile.navbar')
           <!-- End Navbar -->
         </div>
 

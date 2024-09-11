@@ -10,7 +10,7 @@
                     <div class="p-5 mt-5">
                         <h4>Buku {{$buku->judul}}</h4>
                         <p class="m-0'">
-                            Buku{{$buku->judul}} lengkap. Buku {{$buku->judul}} yang ditulis oleh {{$buku->penulis->nama_penulis}}. Informasi selengkapnya mengenai Buku {{$buku->judul}} ada bawah ini.
+                            Buku {{$buku->judul}} lengkap. Buku {{$buku->judul}} yang ditulis oleh {{$buku->penulis->nama_penulis}}. Informasi selengkapnya mengenai Buku {{$buku->judul}} ada bawah ini.
                         </p>
                         <div class="row">
                             <div class="col-lg-4 col-md-12 pb-1">
@@ -24,7 +24,7 @@
                                 <p>Jumlah : {{$buku->jumlah}}</p>
                                 <p>Sinopsis : {{$buku->sinopsis}}</p>
                                 <a href="{{ url('user') }}" class="btn btn-primary px-4 mx-auto mb-4" >kembali</a>
-                                <a href="{{ route('peminjaman.index') }}" class="btn btn-primary px-4 mx-auto mb-4" >pinjam</a>
+                                <a href="{{ route('peminjaman.create') }}" class="btn btn-primary px-4 mx-auto mb-4" >pinjam</a>
                             </div>
                         </div>
                      </div>

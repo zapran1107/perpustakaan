@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\peminjamen;
+use App\Models\peminjaman;
 use App\Models\Buku;
 use App\Models\User;
 use Carbon\Carbon;
@@ -18,10 +18,10 @@ class PeminjamanController extends Controller
     public function index()
     {
         {
-            $peminjaman = peminjamen::orderBy('id', 'desc')->get();
-            return view('user.peminjaman.index', compact('peminjaman'));
+                $peminjaman = peminjaman::orderBy('id', 'desc')->get();
+                return view('user.peminjaman.index', compact('peminjaman'));
+            }
         }
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -30,6 +30,7 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
+        $peminjaman = peminjaman::orderBy('id', 'desc')->get();
         $batastanggal = Carbon::now()->addWeek()->format('Y-m-d');
         $sekarang = now()->format('Y-m-d');
         $buku = Buku::all();
@@ -56,7 +57,7 @@ class PeminjamanController extends Controller
 
 
 
-        $peminjaman = new peminjamen();
+        $peminjaman = new peminjaman();
         $peminjaman->nama_peminjam = $request->nama_peminjam;
         $peminjaman->id_buku = $request->id_buku;
         $peminjaman->jumlah = $request->jumlah;
@@ -66,7 +67,7 @@ class PeminjamanController extends Controller
         $peminjaman->status = $request->status;
         $peminjaman->save();
 
-        return redirect()->route('peminjaman.index')->with('success', 'Buku berhasil dipinjam');
+        return redirect()->route('user.peminjaman.index')->with('success', 'Buku berhasil dipinjam');
     }
 
     /**
@@ -86,7 +87,7 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(peminjamen $peminjaman)
+    public function edit(peminjaman $peminjaman)
     {
         $buku = Buku::all();
         return view('user.peminjaman.edit', compact('peminjaman','buku'));
@@ -100,7 +101,7 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, peminjamen $peminjaman)
+    public function update(Request $request, peminjaman $peminjaman)
     {
 
         $peminjaman->nama_peminjam = $request->nama_peminjam;

@@ -41,6 +41,64 @@
 
       <!-- header-area-start -->
       <header>
+        <header class="top-header">
+            <nav class="navbar navbar-expand align-items-center gap-4 bg-dark">
+
+                <div class="search-bar flex-grow-1">
+                    <div class="position-relative">
+                        {{-- <div class="search-popup p-3">
+                            <div class="card rounded-4 overflow-hidden">
+                                <div class="card-body search-content">
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
+                </div>
+                <ul class="navbar-nav gap-1 nav-right-links align-items-center ">
+                    <li class="nav-item dropdown">
+                        <div class="dropdown-menu dropdown-notify dropdown-menu-end shadow">
+                            <div class="notify-list">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown ">
+                        <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
+                            <img src="https://placehold.co/110x110/png" class="rounded-circle p-1 border" width="45" height="45" alt="">
+                        </a>
+                        <div class="dropdown-menu dropdown-user dropdown-menu-end shadow">
+                            <a class="dropdown-item  gap-2 py-2" href="javascript:;">
+                                <div class="text-center">
+                                    <img src="https://placehold.co/110x110/png" class="rounded-circle p-1 shadow mb-3" width="90" height="90" alt="">
+                                    <h5 class="user-name mb-0 fw-bold">Hello {{Auth::user()->name}}</h5>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            @auth
+                            @if(auth()->user()->isAdmin)
+                            <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="">
+                                <i class="material-icons-outlined">admin_panel_settings</i>Admin Dashboard
+                            </a>
+                            @endif
+                            @endauth
+                            <a class="dropdown-item d-flex align-items-center gap-5 py-2" href="{{ route('home')}}">
+                                <i class="material-icons-outlined">dashboard</i></a>
+                             <a class="dropdown-item d-flex align-items-center gap-5 py-2" href="{{ route('profile')}}">
+                                <i class="material-icons-outlined">profile</i></a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item d-flex align-items-center gap-5 py-2" href="{{ route('login') }}"
+                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="material-icons-outlined">logout</i></a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+
          <div class="header-top space-bg">
             <div class="container">
                <div class="row">
@@ -66,13 +124,6 @@
                                  <li><a href="shop.html"><i class="fal fa-crown"></i> horror</a></li>
                                  <li><a href="shop.html"><i class="fal fa-gift"></i> comedy</a></li>
                               </ul>
-                              <div class="daily-offer">
-                                 <ul>
-                                    <li><a href="shop.html">Value of the Day</a></li>
-                                    <li><a href="shop.html">Top 100 Offers</a></li>
-                                    <li><a href="shop.html">New Arrivals</a></li>
-                                 </ul>
-                              </div>
                            </div>
                         </div>
                      </div>
@@ -81,8 +132,6 @@
                            <nav id="mobile-menu">
                               <ul>
                                  <li>
-
-
                               </ul>
                            </nav>
                         </div>
@@ -111,146 +160,14 @@
       <!-- header-area-end -->
 
       <!-- header-xl-sticky-area -->
-      <div id="header-sticky" class="logo-area tp-sticky-one mainmenu-5">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-xl-2 col-lg-3">
-                  <div class="logo">
-                     <a href="index.html"><img src="{{ asset('frontend/assets/img/logo-custom.png')}}" alt="logo"></a>
-                  </div>
-               </div>
-               <div class="col-xl-6 col-lg-6">
-                  <div class="main-menu">
-                     <nav>
-                        <ul>
 
-
-                        </ul>
-                     </nav>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-9">
-                  <div class="header-meta-info d-flex align-items-center justify-content-end">
-                     <div class="header-meta__social  d-flex align-items-center">
-                        <button class="header-cart p-relative tp-cart-toggle">
-                        </button>
-                        <a href="sign-in.html"><i class="fal fa-user"></i></>
-                     </div>
-                     <div class="header-meta__search-5 ml-25">
-                        <div class="header-search-bar-5">
-                           <form action="#">
-                              <div class="search-info-5 p-relative">
-                                 <button class="header-search-icon-5"><i class="fal fa-search"></i></button>
-                                 <input type="text" placeholder="Search products...">
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
       <!-- header-xl-sticky-end -->
 
       <!-- header-md-lg-area -->
-      <div id="header-tab-sticky" class="tp-md-lg-header d-none d-md-block d-xl-none pt-30 pb-30">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-lg-3 col-md-4 d-flex align-items-center">
-                  <div class="header-canvas flex-auto">
-                     <button class="tp-menu-toggle"><i class="far fa-bars"></i></button>
-                  </div>
-                  <div class="logo">
-                     <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/logo.png')}}" alt="logo"></a>
-                  </div>
-               </div>
-               <div class="col-lg-9 col-md-8">
-                  <div class="header-meta-info d-flex align-items-center justify-content-between">
-                     <div class="header-search-bar">
-                        <form action="#">
-                           <div class="search-info p-relative">
-                              <button class="header-search-icon"><i class="fal fa-search"></i></button>
-                              <input type="text" placeholder="Search products...">
-                           </div>
-                        </form>
-                     </div>
-                     <div class="header-meta__social d-flex align-items-center ml-25">
-                        <button class="header-cart p-relative tp-cart-toggle">
-                           <i class="fal fa-shopping-cart"></i>
-                           <span>2</span>
-                        </button>
-                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
-                        <a href="wishlist.html"><i class="fal fa-heart"></i></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div id="header-mob-sticky" class="tp-md-lg-header d-md-none pt-20 pb-20">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-3 d-flex align-items-center">
-                  <div class="header-canvas flex-auto">
-                     <button class="tp-menu-toggle"><i class="far fa-bars"></i></button>
-                  </div>
-               </div>
-               <div class="col-6">
-                  <div class="logo text-center">
-                     <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/logo.png')}}" alt="logo"></a>
-                  </div>
-               </div>
-               <div class="col-3">
-                  <div class="header-meta-info d-flex align-items-center justify-content-end ml-25">
-                     <div class="header-meta m-0 d-flex align-items-center">
-                        <div class="header-meta__social d-flex align-items-center">
-                           <button class="header-cart p-relative tp-cart-toggle">
-                              <i class="fal fa-shopping-cart"></i>
-                              <span>2</span>
-                           </button>
-                           <a href="sign-in.html"><i class="fal fa-user"></i></a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
       <!-- header-md-lg-area -->
 
       <!-- sidebar-menu-area -->
-      <div class="tpsideinfo">
 
-         <div class="tpsideinfo__search text-center pt-35">
-            <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
-            <form action="#">
-               <input type="text" placeholder="Search Products...">
-               <button><i class="fal fa-search"></i></button>
-            </form>
-         </div>
-         <div class="tpsideinfo__nabtab">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-               <li class="nav-item" role="presentation">
-                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Menu</button>
-               </li>
-               <li class="nav-item" role="presentation">
-                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categories</button>
-               </li>
-             </ul>
-             <div class="tab-content" id="pills-tabContent">
-               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                  <div class="mobile-menu"></div>
-               </div>
-             </div>
-         </div>
-         <div class="tpsideinfo__account-link">
-            <a href="{{ route('login')}}"><i class="fal fa-user"></i> Login / Register</a>
-         </div>
-         <div class="tpsideinfo__wishlist-link">
-            <a href="wishlist.html" target="_parent"><i class="fal fa-heart"></i> Wishlist</a>
-         </div>
-      </div>
       <div class="body-overlay"></div>
       <!-- sidebar-menu-area-end -->
 
@@ -384,87 +301,7 @@
          <!-- category-area-end -->
 
          <!-- product-area-start -->
-         <section class="product-area pt-95 pb-70">
 
-
-               </div>
-               <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
-                     <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-sale" role="tabpanel" aria-labelledby="nav-sale-tab">
-                     <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-17.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-18.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                              <div class="tpproduct__content">
-                                 <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
-                                 <div class="tpproduct__priceinfo p-relative">
-                                    <div class="tpproduct__priceinfo-list">
-                                       <span>$31.00</span>
-                                       <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
-                                    </div>
-                                    <div class="tpproduct__cart">
-                                       <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-19.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-20.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                              <div class="tpproduct__content">
-                                 <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
-                                 <div class="tpproduct__priceinfo p-relative">
-                                    <div class="tpproduct__priceinfo-list">
-                                       <span>$31.00</span>
-                                    </div>
-                                    <div class="tpproduct__cart">
-                                       <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="tpproduct pb-15 mb-30">
-                              <div class="tpproduct__thumb p-relative">
-                                 <a href="shop-details-2.html">
-                                    <img src="{{ asset('frontend/assets/img/product/home-one/product-1.jpg')}}" alt="product-thumb">
-                                    <img class="product-thumb-secondary" src="{{ asset('frontend/assets/img/product/home-one/product-2.jpg')}}" alt="">
-                                 </a>
-                                 <div class="tpproduct__thumb-action">
-                                    <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
-                                    <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                    <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        </div>
-         </section>
          <!-- product-area-end -->
 
          <!-- deal-product-area-start -->
