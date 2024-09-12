@@ -60,14 +60,14 @@ class PeminjamanController extends Controller
         $peminjaman = new peminjaman();
         $peminjaman->nama_peminjam = $request->nama_peminjam;
         $peminjaman->id_buku = $request->id_buku;
-        $peminjaman->jumlah = $request->jumlah;
+        $peminjaman->jumlah = $request->jumlah = 100;
         $peminjaman->tanggal_pinjam = $request->tanggal_pinjam;
         $peminjaman->batas_pinjam = $request->batas_pinjam;
         $peminjaman->tanggal_kembali = $request->tanggal_kembali;
         $peminjaman->status = $request->status;
         $peminjaman->save();
 
-        return redirect()->route('user.peminjaman.index')->with('success', 'Buku berhasil dipinjam');
+        return redirect()->route('peminjaman.index')->with('success', 'Buku berhasil dipinjam');
     }
 
     /**

@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>perpustakaan</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
        />
     <link
       rel="icon"
-      href="{{asset('assets/img/kaiadmin/favicon.ico') }}"
+      href="{{asset('assets/img/smk assalaam.png') }}"
       type="image/x-icon"
     />
 
@@ -93,7 +93,7 @@
       {{-- footer --}}
 
       <!-- Custom template | don't include it in your project! -->
-      <div class="custom-template">
+      {{-- <div class="custom-template">
         <div class="title">Settings</div>
         <div class="custom-content">
           <div class="switcher">
@@ -284,7 +284,7 @@
         <div class="custom-toggle">
           <i class="icon-settings"></i>
         </div>
-      </div>
+      </div> --}}
       <!-- End Custom template -->
     </div>
     <!--   Core JS Files   -->
@@ -321,7 +321,7 @@
     <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
 
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
     <script src="{{ asset('assets/js/demo.js') }}"></script>
     <script>
       $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
@@ -350,6 +350,6 @@
         lineColor: "#ffa534",
         fillColor: "rgba(255, 165, 52, .14)",
       });
-    </script>
+    </script> --}}
   </body>
 </html>

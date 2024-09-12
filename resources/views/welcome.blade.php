@@ -41,9 +41,14 @@
 
       <!-- header-area-start -->
       <header>
+
         <header class="top-header">
             <nav class="navbar navbar-expand align-items-center gap-4 bg-dark">
-
+                <img
+                src="{{ asset('assets/img/smk assalaam.png')}}"
+                height="100">
+                <p style="color: aliceblue"><h2>perpus smk assalaam.</h2></p>
+            </a>
                 <div class="search-bar flex-grow-1">
                     <div class="position-relative">
                         {{-- <div class="search-popup p-3">
@@ -61,7 +66,6 @@
                             </div>
                         </div>
                     </li>
-
                     <li class="nav-item dropdown ">
                         <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
                             <img src="https://placehold.co/110x110/png" class="rounded-circle p-1 border" width="45" height="45" alt="">
@@ -324,10 +328,10 @@
                      <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="footer-widget footer-col-1 mb-40">
                            <div class="footer-logo mb-30">
-                              <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/logo.png')}}" alt="logo"></a>
+                              <a href="index.html"><img src="{{ asset('assets/img/smk assalaam.png')}}" alt="logo" height="150" width="200"></a>
                            </div>
                            <div class="footer-content">
-                              <p>Elegant pink origami design three <br> dimensional view and decoration co-exist. <br> Great for adding a decorative touch to <br> any room’s decor.</p>
+                              <p>perpustakaan smk assalaam bandung <br> menyediakan berbagai macam buku <br> dan juga berbagai macam kategori buku <br> selamat membaca.</p>
                            </div>
                         </div>
                      </div>
@@ -359,29 +363,17 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-2 col-md-4 col-sm-6">
+                     <div class="col-lg-5 col-md-5 col-sm-5">
                         <div class="footer-widget footer-col-4 mb-40">
                            <h4 class="footer-widget__title mb-30">Social Network</h4>
                            <div class="footer-widget__links">
                               <ul>
-                                 <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-                                 <li><a href="#"><i class="fab fa-dribbble"></i>Dribbble</a></li>
-                                 <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-                                 <li><a href="#"><i class="fab fa-behance"></i>Behance</a></li>
-                                 <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
+                                <li><a href="#"><i class="fab fa-dribbble"></i>https://smkassalaambandung</a></li>
+                                 <li><a href="#"><i class="fab fa-facebook-f"></i>smk assalaam bandung</a></li>
+                                 <li><a href="#"><i class="fab fa-twitter"></i>smk asslaam bandung</a></li>
+                                 <li><a href="#"><i class="fab fa-behance"></i>smk assalaam bandung</a></li>
+                                 <li><a href="#"><i class="fab fa-youtube"></i>smk assalaam bandung</a></li>
                               </ul>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-3 col-md-4">
-                        <div class="footer-widget footer-col-5 mb-40">
-                           <h4 class="footer-widget__title mb-30">Get Newsletter</h4>
-                           <p>Get on the list and get 10% off your first order!</p>
-                           <div class="footer-widget__newsletter">
-                              <form action="#">
-                                 <input type="email" placeholder="Enter email address">
-                                 <button class="footer-widget__fw-news-btn tpsecondary-btn">Subscribe Now<i class="fal fa-long-arrow-right"></i></button>
-                              </form>
                            </div>
                         </div>
                      </div>

@@ -36,9 +36,9 @@
                     <td>{{ $data->tanggal_kembali }}</td>
                     <td>
                         @if($data->status)
-                        <p class="dash-lable mb-0 bg-success bg-opacity-10 text-success rounded-2">Sudah di kembalikan</p>
+                        <p class="dash-lable mb-0 bg-success bg-opacity-10 rounded-2">di kembalikan</p>
                         @else
-                        <p class="dash-lable mb-0 bg-danger bg-opacity-10 text-danger rounded-2">Masih dipinjam</p>
+                        <p class="dash-lable mb-0 bg-danger bg-opacity-10 rounded-2">di pinjam</p>
                         @endif
                     </td>
 
@@ -47,7 +47,7 @@
                             @csrf
                             @method('DELETE')
                             <a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning btn-small">Edit</a>
-                            {{-- <button type="submit" class="btn btn-danger btn-small" onclick="return confirm('Apakah anda yakin??')">Hapus</button> --}}
+                            {{--  cb --}}
                         </form>
                     </td>
                 </tr>
