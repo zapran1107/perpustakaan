@@ -43,29 +43,29 @@
               <i class="fas fa-layer-group"></i>
               <p>PENULIS</p>
             </a>
-
-            <li class="nav-item menu-items">
-                <a class="nav-link" href="{{route ('buku.index')}}">
-                  <i class="fas fa-layer-group"></i>
-                  <p>BUKU</p>
-                </a>
-
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="{{route ('penerbit.index')}}">
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{route ('penerbit.index')}}">
                       <i class="fas fa-layer-group"></i>
                       <p>PENERBIT</p>
                     </a>
                     <li class="nav-item menu-items">
                         <a class="nav-link" href="{{route ('kategori.index')}}">
-                          <i class="fas fa-layer-group"></i>
-                          <p>KATEGORI</p>
+                            <i class="fas fa-layer-group"></i>
+                            <p>KATEGORI</p>
                         </a>
                         {{-- <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="material-icons-outlined"></i>LOGOUT</a> --}}
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        </li>
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="{{route ('buku.index')}}">
+                              <i class="fas fa-layer-group"></i>
+                              <p>BUKU</p>
+                            </a>
+                        </li>
+                        {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                        </form>
+                        </form> --}}
                              <div class="collapse" id="submenu">
                                  <ul class="nav nav-collapse">
                                 <li>

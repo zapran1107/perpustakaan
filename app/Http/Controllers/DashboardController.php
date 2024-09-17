@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pengembalian;
-use App\Models\Peminjaman;
-use Carbon\Carbon;
+
+use App\Models\Kategori;
+use App\Models\Penerbit;
+use App\Models\Penulis;
+use App\Models\Buku;
+use App\Models\peminjaman;
+use App\Models\pengembalian;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-
-Carbon::setLocale('id');
-
-class PengembalianController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,13 +20,22 @@ class PengembalianController extends Controller
      */
     public function index()
     {
-        $pengembalian = Peminjaman::where('status', 'sudah Dikembalikan')->get();
 
-        foreach ($pengembalian as $data) {
-            $data->formatted_tanggal = Carbon::parse($data->tanggal)->translatedForamt('l, d F Y');
-        }
+        $kategori = Kategori::count('id');
+        $penulis = Penulis::count('id');
+        $penerbit = Penerbit::count('id');
+        $buku = Buku::count('id');
+        $peminjaman = peminjaman::count('id');
+        $kembali = peminjaman::where('status', 'Sudah Dikembalikan')->count('id');
 
-        return view('user.pengembalian.index', compact('pengembalian'));
+        return view('admin.dashboard', [
+            'buku' => $buku,
+            'penerbit' => $penerbit,
+            'penulis' => $penulis,
+            'kategori' => $kategori,
+            'kembali' => $kembali,
+            'peminjaman' => $peminjaman,
+        ]);
     }
 
     /**
@@ -53,10 +62,10 @@ class PengembalianController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pengembalian  $pengembalian
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Pengembalian $pengembalian)
+    public function show($id)
     {
         //
     }
@@ -64,10 +73,10 @@ class PengembalianController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pengembalian  $pengembalian
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pengembalian $pengembalian)
+    public function edit($id)
     {
         //
     }
@@ -76,10 +85,10 @@ class PengembalianController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pengembalian  $pengembalian
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pengembalian $pengembalian)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -87,10 +96,10 @@ class PengembalianController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pengembalian  $pengembalian
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pengembalian $pengembalian)
+    public function destroy($id)
     {
         //
     }

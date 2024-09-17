@@ -20,7 +20,7 @@
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
                     <p class="card-category">buku</p>
-                    {{$jumlahbuku}}
+                    {{$buku}}
                   </div>
                 </div>
               </div>
@@ -41,7 +41,7 @@
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
                     <p class="card-category">kategori</p>
-                    {{$jumlahkategori}}
+                    {{$kategori}}
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
                     <p class="card-category">penerbit</p>
-                    {{$jumlahpenerbit}}
+                    {{$penerbit}}
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@
                 <div class="col col-stats ms-3 ms-sm-0">
                   <div class="numbers">
                     <p class="card-category">penulis</p>
-                    {{$jumlahpenulis}}
+                    {{$penulis}}
                   </div>
                 </div>
               </div>

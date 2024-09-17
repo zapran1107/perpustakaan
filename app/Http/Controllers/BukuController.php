@@ -81,9 +81,11 @@ class BukuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(buku $buku)
+    public function show($id)
     {
-        return view('buku.show', compact('buku'));
+        $buku = Buku::findOrFail($id);
+
+        return view('admin.buku.show', compact('buku'));
 
     }
 

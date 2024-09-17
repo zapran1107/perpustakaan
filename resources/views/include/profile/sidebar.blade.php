@@ -43,10 +43,15 @@
               <p>PEMINJAMAN</p>
             </a>
             <li class="nav-item menu-items">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('profile')}}">
                   <i class="fas fa-layer-group"></i>
                   <p>PROFILE</p>
                 </a>
+            {{-- <li class="nav-item menu-items">
+                <a class="nav-link" href="">
+                  <i class="fas fa-layer-group"></i>
+                  <p>PROFILE</p>
+                </a> --}}
                  {{-- <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                  <i class="material-icons-outlined"></i>Logout</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
