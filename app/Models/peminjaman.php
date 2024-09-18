@@ -24,6 +24,6 @@ class peminjaman extends Model
 
     public function peminjaman()
     {
-        return $this->belongsTo(Peminjaman::class, 'id_minjem');
+        return $this->belongsTo(Peminjaman::class, 'id_peminjaman');
     }
 }

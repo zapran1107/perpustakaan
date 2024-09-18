@@ -34,22 +34,22 @@
                     <td>{{ $data->tanggal_pinjam }}</td>
                     <td>{{ $data->batas_pinjam }}</td>
                     <td>{{ $data->tanggal_kembali }}</td>
-                    <td>
-                        @if ($data->status == 'diterima')
-                        <span class="badge bg-success">{{ ucfirst($data->status) }}</span>
-                        @elseif ($data->status == 'ditolak')
-                         <span class="badge bg-danger">{{ ucfirst($data->status) }}</span>
-                        @elseif ($data->status == 'dikembalikan')
-                        <span class="badge bg-danger">{{ ucfirst($data->status) }}</span>                            @else
-                        <span class="badge bg-warning">{{ ucfirst($data->status) }}</span>
+                    {{-- <td>
+                        @if($data->status)
+                        <p class="dash-lable mb-0 bg-success bg-opacity-10 rounded-2">di kembalikan</p>
+                        @else
+                        <p class="dash-lable mb-0 bg-danger bg-opacity-10 rounded-2">di pinjam</p>
                         @endif
-                    </td>
-
+                    </td> --}}
+                        <td>
+                            <a href="{{ route('peminjamanadmin.detail', $data->id) }}" class="btn btn-info btn-sm">Lihat
+                                Detail</a>
+                        </td>
                     <td>
-                        <form action="{{ route('peminjaman.destroy', $data->id) }}" method="POST">
+                        {{-- <form action="{{ route('peminjamanadmin.destroy', $data->id) }}" method="POST"> --}}
                             @csrf
                             @method('DELETE')
-                            <a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning btn-small">Edit</a>
+                            {{-- <a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning btn-small">Edit</a> --}}
                             {{--  cb --}}
                         </form>
                     </td>

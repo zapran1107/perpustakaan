@@ -34,8 +34,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', IsAdmin::class]], fu
     Route::resource('penerbit', PenerbitController::class);
     Route::resource('buku', BukuController::class);
     Route::resource('user', UserController::class);
-    // Route::resource('peminjaman', [PeminjamanController::class,'indexadmin'])->name('peminjamanadmin.admin');
-    // Route::resource('peminjaman/{id}/detail', [PeminjamanController::class,'show'])->name('peminjamanadmin.detail');
+    Route::get('peminjaman', [PeminjamanController::class,'indexadmin'])->name('peminjamanadmin.admin');
+    Route::get('peminjaman/{id}/detail', [PeminjamanController::class,'show'])->name('peminjamanadmin.detail');
 });
 
 Route::get('', [PerpustakaanController::class, 'index'])->name('halamanuser');
