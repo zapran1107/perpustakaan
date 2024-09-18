@@ -14,7 +14,7 @@ class PenerbitController extends Controller
     public function index()
     {
         $penerbit = Penerbit::orderBy('id', 'desc')->get();
-        return view('penerbit.index', compact('penerbit'));
+        return view('admin.penerbit.index', compact('penerbit'));
     }
 
     /**
@@ -24,7 +24,7 @@ class PenerbitController extends Controller
      */
     public function create()
     {
-        return view('penerbit.create');
+        return view('admin.penerbit.create');
     }
 
     /**
@@ -73,7 +73,7 @@ class PenerbitController extends Controller
     public function edit($id)
     {
         $penerbit = penerbit::findOrFail($id);
-        return view('penerbit.edit', compact('penerbit'));
+        return view('admin.penerbit.edit', compact('penerbit'));
     }
 
     /**

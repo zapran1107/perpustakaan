@@ -25,7 +25,7 @@ use App\Http\Middleware\IsAdmin;
 
 Route::get('/', function () {
     return view('layouts.backend');
-})->middleware('auth');
+});
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', IsAdmin::class]], function () {
     Route::get('home', [DashboardController::class, 'index'])->name('home');
@@ -53,4 +53,4 @@ Route::group(['prefix' => 'user','middleware' =>['auth']], function () {
     Route::resource('pengembalian', pengembalianController::class);
 });
 
-// Auth::routes();  
+Auth::routes();

@@ -41,7 +41,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
   </head>
-  <body>
+  <body  style="overflow-x: hidden">
     <div class="wrapper">
       <!-- Sidebar -->
         @include('include.backend.sidebar')

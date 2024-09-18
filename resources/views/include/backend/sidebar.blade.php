@@ -28,7 +28,7 @@
       <div class="sidebar-content">
         <ul class="nav nav-secondary">
           <li class="nav-item active">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{route ('home')}}">
                 <P>DASHBOARD</P>
             </a>
 

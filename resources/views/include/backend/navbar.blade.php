@@ -33,20 +33,18 @@
                     <hr class="dropdown-divider">
                     @auth
                     @if(auth()->user()->isAdmin)
-                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="">
-                        <i class="material-icons-outlined">admin_panel_settings</i>Admin Dashboard
-                    </a>
+
                     @endif
                     @endauth
-                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ url('user')}}">
+                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ url('/')}}">
                         <i class="material-icons-outlined">buku</i></a>
                     <hr class="dropdown-divider">
-                    {{-- <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> --}}
+                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="material-icons-outlined">logout</i></a>
 
-                    {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
-                    </form> --}}
+                    </form>
                 </div>
             </li>
         </ul>

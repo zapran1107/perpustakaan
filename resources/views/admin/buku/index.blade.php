@@ -25,7 +25,6 @@
                 <th scope="col">KATEGORI</th>
                 <th scope="col">TAHUN TERBIT</th>
                 <th scope="col">foto</th>
-                <th scope="col">Sinopsis</th>
                 <th scope="col">AKSI</th>
                  </tr>
                 </thead>
@@ -40,7 +39,6 @@
                <td>{{ $data->penerbit->nama_penerbit}}</td>
                <td>{{ $data->kategori->nama_kategori }}</td>
                <td>{{ $data->tahun_terbit}}</td>
-               <td>{{ $data->sinopsis}}</td>
                <td>
                 <img src=" {{ asset('/images/buku/' . $data->foto)}}" width="100">
                </td>

@@ -19,7 +19,7 @@ class BukuController extends Controller
     public function index()
     {
         $buku = buku::orderBy('id', 'desc')->get();
-        return view('buku.index', compact('buku'));
+        return view('admin.buku.index', compact('buku'));
     }
 
     /**
@@ -32,7 +32,7 @@ class BukuController extends Controller
         $penulis = penulis::all();
         $penerbit = penerbit::all();
         $kategori = kategori::all();
-        return view('buku.create',compact('kategori','penulis','penerbit'));
+        return view('admin.buku.create',compact('kategori','penulis','penerbit'));
     }
 
     /**
@@ -100,7 +100,7 @@ class BukuController extends Controller
         $penulis = penulis::all();
         $penerbit = penerbit::all();
         $kategori = kategori::all();
-        return view('buku.edit',compact('kategori','penulis','penerbit','buku'));
+        return view('admin.buku.edit',compact('kategori','penulis','penerbit','buku'));
     }
 
     /**

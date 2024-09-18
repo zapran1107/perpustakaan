@@ -13,9 +13,17 @@ class peminjaman extends Model
     protected $fillable = ['id', 'nama_peminjam', 'id_buku', 'jumlah', 'tanggal_pinjam', 'tanggal_kembali', 'status'];
 
     public $timestamps = true;
-
     public function buku()
     {
         return $this->belongsTo(Buku::class, 'id_buku');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_buku');
+    }
+
+    public function peminjaman()
+    {
+        return $this->belongsTo(Peminjaman::class, 'id_minjem');
     }
 }

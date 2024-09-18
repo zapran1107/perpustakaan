@@ -23,7 +23,7 @@
                                 <p>Kategori : {{$buku->kategori->nama_kategori}}</p>
                                 <p>Jumlah : {{$buku->jumlah}}</p>
                                 <p>Sinopsis : {{$buku->sinopsis}}</p>
-                                <a href="{{ url('user') }}" class="btn btn-primary px-4 mx-auto mb-4" >kembali</a>
+                                <a href="{{ url()->previous() }}" class="btn btn-primary px-4 mx-auto mb-4" >kembali</a>
                                 <a href="{{ route('peminjaman.create') }}" class="btn btn-primary px-4 mx-auto mb-4" >pinjam</a>
                             </div>
                         </div>

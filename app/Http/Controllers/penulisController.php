@@ -15,7 +15,7 @@ class PenulisController extends Controller
     public function index()
     {
         $penulis = Penulis::orderBy('id', 'desc')->get();
-        return view('penulis.index', compact('penulis'));
+        return view('admin.penulis.index', compact('penulis'));
     }
 
     /**
@@ -74,7 +74,7 @@ class PenulisController extends Controller
     public function edit($id)
     {
         $penulis = Penulis::findOrFail($id);
-        return view('penulis.edit', compact('penulis'));
+        return view('admin.penulis.edit', compact('penulis'));
     }
 
     /**

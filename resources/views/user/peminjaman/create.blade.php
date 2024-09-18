@@ -72,7 +72,7 @@
 
                                 <div class="col-md-6">
                                     <label for="input13" class="form-label">Jumlah</label>
-                                    <input class="form-control mb-3" type="number" name="jumlah_pinjam" placeholder="Jumlah" required>
+                                    <input class="form-control mb-3" type="number" name="jumlah" placeholder="Jumlah" required>
                                 </div>
 
                                 <div class="col-md-6">

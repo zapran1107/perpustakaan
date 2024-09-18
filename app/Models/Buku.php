@@ -27,4 +27,12 @@ class Buku extends Model
     {
         return $this->belongsTo(Kategori::class, 'id_kategori');
     }
+    public function peminjaman()
+    {
+        return $this->belongsTo(Peminjaman::class, 'id_kategori');
+    }
+    public function pengembalian()
+    {
+        return $this->belongsTo(Pengembalian::class, 'id_kategori');
+    }
 }
