@@ -1,7 +1,8 @@
-@extends('layouts.profileuser')
+@extends('layouts.backend')
 @section('content')
 <h3 class="mb-0 text-uppercase pb-3">PINJAMAN BUKU</h3>
 <hr>
+<div class="col-md-15" style="padding-top: 50px">
 <div class="card">
     <div class="card-body">
         @if (session('success'))
@@ -20,7 +21,6 @@
                     <th scope="col">Tanggal Peminjaman</th>
                     <th scope="col">Batas Peminjaman</th>
                     <th scope="col">Tanggal Pengembalian</th>
-                    <th scope="col">Status</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -58,5 +58,6 @@
             </tbody>
         </table>
     </div>
+</div>
 </div>
 @endsection

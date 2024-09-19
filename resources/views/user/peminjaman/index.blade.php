@@ -2,7 +2,8 @@
 @section('content')
 <h3 class="mb-0 text-uppercase pb-3">PINJAMAN BUKU</h3>
 <hr>
-<div class="card">
+<div class="col-md-15" style="padding-top: 50px">
+<div class="card" style="overflow: hidden">
     <div class="card-body">
         @if (session('success'))
         <div class="alert alert-success">
@@ -58,5 +59,6 @@
             </tbody>
         </table>
     </div>
+</div>
 </div>
 @endsection

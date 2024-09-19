@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="d-md-flex d-grid align-items-center gap-3">
-                        <a href="{{route('buku.index')}}" class="btn btn-danger px-4">Batal</a>
+                        <a href="{{route('peminjaman.index')}}" class="btn btn-danger px-4">Batal</a>
                         <button type="submit" class="btn btn-primary px-4">Submit</button>
                     </div>
                 </div>

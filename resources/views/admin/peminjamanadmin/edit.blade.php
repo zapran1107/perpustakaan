@@ -1,4 +1,4 @@
-@extends('layouts.profileuser')
+@extends('layouts.backend')
 @section('content')
     <div class="card">
         <div class="card-body">

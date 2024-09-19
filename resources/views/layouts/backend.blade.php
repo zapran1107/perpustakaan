@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>perpustakaan</title>
     <meta
@@ -37,7 +38,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.min.css') }}" />
-
+    <link href="{{asset('assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
   </head>
@@ -86,6 +87,95 @@
                         @yield('content')
                     </div>
                 </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="card card-round">
+                        <div class="card-header">
+                          <div class="card-head-row">
+                            <div class="card-title">User Statistics</div>
+                            <div class="card-tools">
+                              <a
+                                href="#"
+                                class="btn btn-label-success btn-round btn-sm me-2"
+                              >
+                                <span class="btn-label">
+                                  <i class="fa fa-pencil"></i>
+                                </span>
+                                Export
+                              </a>
+                              <a href="#" class="btn btn-label-info btn-round btn-sm">
+                                <span class="btn-label">
+                                  <i class="fa fa-print"></i>
+                                </span>
+                                Print
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="chart-container" style="min-height: 375px">
+                            <canvas id="statisticsChart"></canvas>
+                          </div>
+                          <div id="myChartLegend"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card card-primary card-round">
+                        <div class="card-header">
+                          <div class="card-head-row">
+                            <div class="card-title">Daily Sales</div>
+                            <div class="card-tools">
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-sm btn-label-light dropdown-toggle"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-bs-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  Export
+                                </button>
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton"
+                                >
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-category">March 25 - April 02</div>
+                        </div>
+                        <div class="card-body pb-0">
+                          <div class="mb-4 mt-2">
+                            <h1>$4,578.58</h1>
+                          </div>
+                          <div class="pull-in">
+                            <canvas id="dailySalesChart"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-round">
+                        <div class="card-body pb-0">
+                          <div class="h1 fw-bold float-end text-primary">+5%</div>
+                          <h2 class="mb-2">17</h2>
+                          <p class="text-muted">Users online</p>
+                          <div class="pull-in sparkline-fix">
+                            <div id="lineChart"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
             </main>
         {{-- akhir main content --}}
             {{-- footer --}}
@@ -320,36 +410,61 @@
     <!-- Kaiadmin JS -->
     <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
 
-    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    {{-- <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
-    <script src="{{ asset('assets/js/demo.js') }}"></script>
+    <script src="{{asset('assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+     <script>
+        $(".data-attributes span").peity("donut")
+
+    </>
     <script>
-      $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#177dff",
-        fillColor: "rgba(23, 125, 255, 0.14)",
-      });
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
 
-      $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#f3545d",
-        fillColor: "rgba(243, 84, 93, .14)",
-      });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#example2').DataTable({
+                lengthChange: false
+                , buttons: [ 'excel', 'pdf', 'print']
+            });
 
-      $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#ffa534",
-        fillColor: "rgba(255, 165, 52, .14)",
-      });
-    </script> --}}
+            table.buttons().container()
+                .appendTo('#example2_wrapper .col-md-6:eq(0)');
+        });
+
+    </script>
+
+
+    // <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    // {{-- <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
+    // <script src="{{ asset('assets/js/demo.js') }}"></script>
+    // <script>
+    //   $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+    //     type: "line",
+    //     height: "70",
+    //     width: "100%",
+    //     lineWidth: "2",
+    //     lineColor: "#177dff",
+    //     fillColor: "rgba(23, 125, 255, 0.14)",
+    //   });
+
+    //   $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+    //     type: "line",
+    //     height: "70",
+    //     width: "100%",
+    //     lineWidth: "2",
+    //     lineColor: "#f3545d",
+    //     fillColor: "rgba(243, 84, 93, .14)",
+    //   });
+
+    //   $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+    //     type: "line",
+    //     height: "70",
+    //     width: "100%",
+    //     lineWidth: "2",
+    //     lineColor: "#ffa534",
+    //     fillColor: "rgba(255, 165, 52, .14)",
+    //   });
+    // </script> --}}
   </body>
 </html>

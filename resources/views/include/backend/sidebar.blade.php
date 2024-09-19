@@ -1,3 +1,4 @@
+
 <div class="sidebar" data-background-color="dark">
     <div class="sidebar-logo">
       <!-- Logo Header -->
@@ -29,13 +30,14 @@
         <ul class="nav nav-secondary">
           <li class="nav-item active">
             <a class="nav-link" href="{{route ('home')}}">
+                <i class="fas fa-home"></i>
                 <P>DASHBOARD</P>
             </a>
 
           </li>
           <li class="nav-section">
             <span class="sidebar-mini-icon">
-              <i class="fa fa-ellipsis-h"></i>
+                <i class="fa fa-ellipsis-h"></i>
             </span>
           </li>
           <li class="nav-item menu-items">
@@ -54,8 +56,6 @@
                             <i class="fas fa-layer-group"></i>
                             <p>KATEGORI</p>
                         </a>
-                        {{-- <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ route('login') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="material-icons-outlined"></i>LOGOUT</a> --}}
                         </li>
                         <li class="nav-item menu-items">
                             <a class="nav-link" href="{{route ('buku.index')}}">
@@ -63,9 +63,15 @@
                               <p>BUKU</p>
                             </a>
                         </li>
-                        {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form> --}}
+
+
+
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="{{route ('peminjamanadmin.admin')}}">
+                              <i class="fas fa-layer-group"></i>
+                              <p>PENGAJUAN PEMINJAMAN</p>
+                            </a>
+                        </li>
                              <div class="collapse" id="submenu">
                                  <ul class="nav nav-collapse">
                                 <li>

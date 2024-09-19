@@ -3,23 +3,24 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" style="padding-top: 100px">
             <div class="card">
                 <div class="card-header"> {{__('DATA PENERBIT')}}  </div>
 
                 <div class="card-body">
-                    <a href="{{ route('penerbit.create') }}" class="btn btn-primary">add data</a>
+                    <a href="{{ route('penerbit.create') }}" class="btn btn-primary">tambah data</a>
                     @if(session('success'))
                     <div class="alert alert-success">
                         {{ session('success')}}
                     </div>
                     @endif
-                <table class="table">
+                <table class="table" id="example2">
             <thead>
                 <tr>
                 <th scope="col">NO</th>
                 <th scope="col">NAMA</th>
                 <th scope="col">ALAMAT</th>
+                <th scope="col">AKSI</th>
                  </tr>
                 </thead>
                 <tbody>
@@ -34,8 +35,7 @@
                     @method('DELETE')
                <td>
                 <a href="{{ route('penerbit.edit', $data->id) }}" class="btn btn-success">edit</a>
-                {{-- <a href="{{ route('penerbit.show', $data->id) }}" class="btn btn-warning">show</a> --}}
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-danger">hapus</button>
                </td>
                </form>
              </tr>

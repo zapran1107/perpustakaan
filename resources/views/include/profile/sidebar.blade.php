@@ -44,6 +44,12 @@
               <p>PEMINJAMAN</p>
             </a>
         </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{route ('daftarbuku.index')}}">
+              <i class="fas fa-layer-group"></i>
+              <p>DAFTAR BUKU</p>
+            </a>
+        </li>
         </ul>
       </div>
     </div>

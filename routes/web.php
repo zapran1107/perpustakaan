@@ -10,7 +10,9 @@ use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\pengembalianController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DaftarBukuController;
 use App\Http\Middleware\IsAdmin;
+use App\Models\DaftarBuku;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', IsAdmin::class]], fu
     Route::resource('penerbit', PenerbitController::class);
     Route::resource('buku', BukuController::class);
     Route::resource('user', UserController::class);
+
     Route::get('peminjaman', [PeminjamanController::class,'indexadmin'])->name('peminjamanadmin.admin');
     Route::get('peminjaman/{id}/detail', [PeminjamanController::class,'show'])->name('peminjamanadmin.detail');
 });
@@ -46,6 +49,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('profile', [PerpustakaanController::class, 'profile'])->name('profile');
     Route::get('dashboarduser', [PerpustakaanController::class, 'dashboard'])->name('dashboarduser');
     // Route::get('peminjaman/history', [PeminjamanController::class, 'history'])->name('peminjaman.story');
+    Route::get('daftarbuku', [DaftarBukuController::class, 'index'])->name('daftarbuku.index');
 });
 
 Route::group(['prefix' => 'user','middleware' =>['auth']], function () {

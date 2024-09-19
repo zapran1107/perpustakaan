@@ -3,18 +3,18 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-11">
+        <div class="col-md-11" style="padding-top: 100px">
             <div class="card">
-                <div class="card-header"> {{__('DATA RPODUCT')}}  </div>
-
-                <div class="card-body">
-                    <a href="{{ route('buku.create') }}" class="btn btn-primary">add data</a>
+                <div class="card-header"> {{__('DATA BUKU')}}  </div>
+                <div class="card-body" >
+                    <a href="{{ route('buku.create') }}" class="btn btn-primary">tambah data</a>
                     @if(session('success'))
                     <div class="alert alert-success">
                         {{ session('success')}}
                     </div>
+
                     @endif
-                <table class="table">
+                <table class="table" id="example2">
             <thead>
                 <tr>
                 <th scope="col">NO</th>
@@ -47,8 +47,7 @@
                     @method('DELETE')
                <td>
                 <a href="{{ route('buku.edit', $data->id) }}" class="btn btn-success">edit</a>
-                {{-- <a href="{{ route('buku.show', $data->id) }}" class="btn btn-warning">show</a> --}}
-                <button type="submit" class="btn btn-danger" onclick="return confrim('apakah anda yakin ingin menghapus data ini?')">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="return confrim('apakah anda yakin ingin menghapus data ini?')">hapus</button>
                </td>
                </form>
              </tr>
@@ -61,3 +60,5 @@
     </div>
 </div>
 @endsection
+
+
