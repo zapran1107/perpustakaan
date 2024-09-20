@@ -79,8 +79,7 @@
                                     Assalaam</h4>
                                 <h1 class="display-4 text-uppercase text-white mb-4">Ayo Membaca Agar Pemikiran kita
                                     Lebih Terbuka</h1>
-                                <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy...
+                                <p class="mb-5 fs-5">Membaca buku sangat baik sebagai latihan otak dan pikiran. Membaca dapat membantu menjaga otak agar selalu menjalankan fungsinya secara sempurna.
                                 </p>
                             </div>
                         </div>
@@ -99,8 +98,7 @@
                                     Assalaam</h4>
                                 <h1 class="display-4 text-uppercase text-white mb-4">Luangkan Sedikit Waktu mu Untuk
                                     Membaca</h1>
-                                <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy...
+                                <p class="mb-5 fs-5">Membaca buku sangat baik sebagai latihan otak dan pikiran. Membaca dapat membantu menjaga otak agar selalu menjalankan fungsinya secara sempurna. Saat membaca, otak dituntut untuk berpikir, menganalisis berbagai masalah, mencari jalan keluar dan solusi hingga menemukan hal-hal baru.
                                 </p>
                             </div>
                         </div>

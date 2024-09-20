@@ -9,7 +9,7 @@
             alt="navbar brand"
             class="navbar-brand"
             height="100"
-          />''
+          />
         </a>
         <div class="nav-toggle">
           <button class="btn btn-toggle toggle-sidebar">
@@ -30,7 +30,7 @@
         <ul class="nav nav-secondary">
           <li class="nav-item active">
             <a class="nav-link" href="{{route ('home')}}">
-                <i class="fas fa-home"></i>
+                <i class="fa fa-th-large" style="font-size:25px;"></i>
                 <P>DASHBOARD</P>
             </a>
 
@@ -42,33 +42,30 @@
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('penulis.index')}}">
-              <i class="fas fa-layer-group"></i>
+                <i class="fa fa-edit" style="font-size:25px"></i>
               <p>PENULIS</p>
             </a>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('penerbit.index')}}">
-                      <i class="fas fa-layer-group"></i>
+                <i class="fa fa-address-book-o" style="font-size:25px"></i>
                       <p>PENERBIT</p>
                     </a>
                     <li class="nav-item menu-items">
                         <a class="nav-link" href="{{route ('kategori.index')}}">
-                            <i class="fas fa-layer-group"></i>
+                            <i class="fa fa-list-alt" style="font-size:25px;"></i>
                             <p>KATEGORI</p>
                         </a>
                         </li>
                         <li class="nav-item menu-items">
                             <a class="nav-link" href="{{route ('buku.index')}}">
-                              <i class="fas fa-layer-group"></i>
+                                <i class="fa fa-book" style="font-size:25px"></i>
                               <p>BUKU</p>
                             </a>
                         </li>
-
-
-
                         <li class="nav-item menu-items">
                             <a class="nav-link" href="{{route ('peminjamanadmin.admin')}}">
-                              <i class="fas fa-layer-group"></i>
+                                <i class="fa fa-file-text-o" style="font-size:25px;"></i>
                               <p>PENGAJUAN PEMINJAMAN</p>
                             </a>
                         </li>

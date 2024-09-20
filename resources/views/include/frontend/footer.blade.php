@@ -8,8 +8,8 @@
                                 <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>Perpustakaan Smk Assalaam</h4>
                                 <!-- <img src="img/logo.png" alt="Logo"> -->
                             </a>
-                            <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
-                           
+                            <p class="mb-4">Perpustakaan smk assalaam di buat untuk memudahkan para siswa siswi dan guru guru yang ingin membaca maupun meminjam buku...</p>
+
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-2">

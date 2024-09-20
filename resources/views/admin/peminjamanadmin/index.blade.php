@@ -11,17 +11,17 @@
         </div>
         @endif
         {{-- <a href="{{ route('peminjaman.create') }}" class="btn btn-grd btn-primary px-5 mb-2">Tambah Data Peminjaman</a> --}}
-        <table class="table mb-0 table-striped" id="example">
+        <table class="table mb-0 table-striped" id="example2">
             <thead>
                 <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Buku</th>
-                    <th scope="col">Nama Peminjam</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Tanggal Peminjaman</th>
-                    <th scope="col">Batas Peminjaman</th>
-                    <th scope="col">Tanggal Pengembalian</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">NO</th>
+                    <th scope="col">NAMA BUKU</th>
+                    <th scope="col">NAMA PEMINJAM</th>
+                    <th scope="col">JUMLAH</th>
+                    <th scope="col">TANGGAL PEMINJAMAN</th>
+                    <th scope="col">BATAS PEMINJAMAN</th>
+                    <th scope="col">TANGGAL PENGEMBALIAN</th>
+                    <th scope="col">AKSI</th>
                 </tr>
             </thead>
             <tbody>

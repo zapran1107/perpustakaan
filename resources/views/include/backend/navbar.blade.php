@@ -33,7 +33,6 @@
                     <hr class="dropdown-divider">
                     @auth
                     @if(auth()->user()->isAdmin)
-
                     @endif
                     @endauth
                     <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{ url('/')}}">

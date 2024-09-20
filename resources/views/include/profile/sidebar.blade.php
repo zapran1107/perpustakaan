@@ -29,6 +29,7 @@
         <ul class="nav nav-secondary">
           <li class="nav-item active">
             <a class="nav-link" href="{{route ('dashboarduser')}}">
+                <i class="fa fa-th-large" style="font-size:25px;"></i>
                 <P>DASHBOARD</P>
             </a>
 
@@ -40,13 +41,13 @@
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('peminjaman.index')}}">
-              <i class="fas fa-layer-group"></i>
+                <i class="fa fa-hand-paper-o" style="font-size:24px"></i>
               <p>PEMINJAMAN</p>
             </a>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('daftarbuku.index')}}">
-              <i class="fas fa-layer-group"></i>
+                <i class="fa fa-book" style="font-size:25px"></i>
               <p>DAFTAR BUKU</p>
             </a>
         </li>

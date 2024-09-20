@@ -46,8 +46,10 @@
                     @csrf
                     @method('DELETE')
                <td>
+                <div class="container">
                 <a href="{{ route('buku.edit', $data->id) }}" class="btn btn-success">edit</a>
                 <button type="submit" class="btn btn-danger" onclick="return confrim('apakah anda yakin ingin menghapus data ini?')">hapus</button>
+                </div>
                </td>
                </form>
              </tr>

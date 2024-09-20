@@ -22,7 +22,7 @@
                     <th scope="col">Batas Peminjaman</th>
                     <th scope="col">Tanggal Pengembalian</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">AKSI</th>
                 </tr>
             </thead>
             <tbody>
