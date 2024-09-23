@@ -21,11 +21,11 @@ class PeminjamanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        {
-                $peminjaman = peminjaman::orderBy('id', 'desc')->get();
-                return view('user.peminjaman.index', compact('peminjaman'));
-            }
+    { {
+            $peminjaman = peminjaman::orderBy('id', 'desc')->get();
+            $buku = Buku::all();
+            return view('user.peminjaman.index', compact('peminjaman', 'buku'));
+        }
     }
 
     public function indexAdmin()
@@ -80,7 +80,7 @@ class PeminjamanController extends Controller
         $peminjaman->tanggal_pinjam = $request->tanggal_pinjam;
         $peminjaman->batas_pinjam = $request->batas_pinjam;
         $peminjaman->tanggal_kembali = $request->tanggal_kembali;
-        $peminjaman->status = $request->status;
+        $peminjaman->status =   'ditahan';
         $peminjaman->save();
 
         return redirect()->route('peminjaman.index')->with('success', 'Buku berhasil dipinjam');
@@ -107,8 +107,7 @@ class PeminjamanController extends Controller
     public function edit(peminjaman $peminjaman)
     {
         $buku = Buku::all();
-        return view('user.peminjaman.edit', compact('peminjaman','buku'));
-
+        return view('user.peminjaman.edit', compact('peminjaman', 'buku'));
     }
 
     /**
@@ -120,47 +119,42 @@ class PeminjamanController extends Controller
      */
     public function update(Request $request, $id)
     {
-      // Temukan objek Minjem berdasarkan ID
-      $peminjaman = peminjaman::findOrFail($id);
+        // Temukan objek Minjem berdasarkan ID
+        $peminjaman = peminjaman::findOrFail($id);
 
-      // Ambil status dari request
-      $status = $request->input('status');
+        // Ambil status dari request
+        $status = $request->input('status');
 
-      // Temukan buku yang dipinjam
-      $buku = Buku::findOrFail($peminjaman->id_buku);
+        // Temukan buku yang dipinjam
+        $buku = Buku::findOrFail($peminjaman->id_buku);
 
-      // Terapkan logika berdasarkan status
-      if ($status === 'diterima') {
-          // Kurangi stok buku jika diterima
-          $buku->jumlah -= $peminjaman->jumlah;
-          $buku->save();
-        $peminjaman->status = 'diterima';
-          Alert::success('Peminjaman diterima', 'Stok buku berhasil dikurangi')->autoclose(1500);
-
-      }elseif ($status === 'ditahan') {
-        // Tambah stok buku jika ditahan
-        $buku->jumlah += $peminjaman->jumlah;
-        $buku->save();
-        $peminjaman->status = 'ditahan';
-        Alert::info('Peminjaman ditahan', 'Peminjaman buku ditahan')->autoclose(1500);
-
-
-         }   elseif ($status === 'ditolak') {
-          // Tidak ada perubahan pada stok buku jika ditolak
-          $peminjaman->status = 'ditolak';
-          Alert::error('Peminjaman ditolak', 'Pengajuan peminjaman buku ditolak')->autoclose(1500);
-
-      } elseif ($status === 'dikembalikan') {
-          // Tambah stok buku jika dikembalikan
-          $buku->jumlah += $peminjaman->jumlah;
-          $buku->save();
-        //   $peminjaman->status = 'dikembalikan';
-          Alert::success('Peminjaman dikembalikan', 'Peminjaman buku dikembalikan')->autoclose(1500);
-
-      } else {
-          // Jika status "ditahan"
-          Alert::info('Status ditahan', 'Pengajuan peminjaman buku masih ditahan')->autoclose(1500);
-      }
+        // Terapkan logika berdasarkan status
+        if ($status === 'diterima') {
+            // Kurangi stok buku jika diterima
+            $buku->jumlah -= $peminjaman->jumlah;
+            $buku->save();
+            $peminjaman->status = 'diterima';
+            Alert::success('Peminjaman diterima', 'Stok buku berhasil dikurangi')->autoclose(1500);
+        } elseif ($status === 'ditahan') {
+            // Tambah stok buku jika ditahan
+            $buku->jumlah += $peminjaman->jumlah;
+            $buku->save();
+            $peminjaman->status = 'ditahan';
+            Alert::info('Peminjaman ditahan', 'Peminjaman buku ditahan')->autoclose(1500);
+        } elseif ($status === 'ditolak') {
+            // Tidak ada perubahan pada stok buku jika ditolak
+            $peminjaman->status = 'ditolak';
+            Alert::error('Peminjaman ditolak', 'Pengajuan peminjaman buku ditolak')->autoclose(1500);
+        } elseif ($status === 'dikembalikan') {
+            // Tambah stok buku jika dikembalikan
+            $buku->jumlah += $peminjaman->jumlah;
+            $buku->save();
+            //   $peminjaman->status = 'dikembalikan';
+            Alert::success('Peminjaman dikembalikan', 'Peminjaman buku dikembalikan')->autoclose(1500);
+        } else {
+            // Jika status "ditahan"
+            Alert::info('Status ditahan', 'Pengajuan peminjaman buku masih ditahan')->autoclose(1500);
+        }
 
         $peminjaman->save();
 
@@ -175,8 +169,7 @@ class PeminjamanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        {
+    { {
             $minjem = peminjaman::findOrFail($id);
             $minjem->delete();
             return redirect()->route('peminjamanadmin.index');

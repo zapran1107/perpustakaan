@@ -21,14 +21,14 @@
                     <th scope="col">TANGGAL PEMINJAMAN</th>
                     <th scope="col">BATAS PEMINJAMAN</th>
                     <th scope="col">TANGGAL PENGEMBALIAN</th>
-                    <th scope="col">AKSI</th>
+                    <th scope="col"><center>AKSI</center></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($peminjaman as $data)
                 <tr>
                     <th scope="row">{{ $loop->index+1 }}</th>
-                    <td>{{ $data->buku->judul }}</td>
+                    <td>{{ $data->judul}}</td>
                     <td>{{ $data->nama_peminjam}}</td>
                     <td>{{ $data->jumlah }}</td>
                     <td>{{ $data->tanggal_pinjam }}</td>

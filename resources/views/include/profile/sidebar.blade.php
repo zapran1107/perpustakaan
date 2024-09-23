@@ -8,7 +8,7 @@
             alt="navbar brand"
             class="navbar-brand"
             height="100"
-          />''
+          />
         </a>
         <div class="nav-toggle">
           <button class="btn btn-toggle toggle-sidebar">
@@ -27,7 +27,7 @@
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
       <div class="sidebar-content">
         <ul class="nav nav-secondary">
-          <li class="nav-item active">
+          <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('dashboarduser')}}">
                 <i class="fa fa-th-large" style="font-size:25px;"></i>
                 <P>DASHBOARD</P>

@@ -22,14 +22,14 @@
                     <th scope="col">Batas Peminjaman</th>
                     <th scope="col">Tanggal Pengembalian</th>
                     <th scope="col">Status</th>
-                    <th scope="col">AKSI</th>
+                    <th scope="col"><center>AKSI</center></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($peminjaman as $data)
                 <tr>
                     <th scope="row">{{ $loop->index+1 }}</th>
-                    <td>{{ $data->buku->judul }}</td>
+                    <td>{{ $data->judul }}</td>
                     <td>{{ $data->nama_peminjam}}</td>
                     <td>{{ $data->jumlah }}</td>
                     <td>{{ $data->tanggal_pinjam }}</td>
@@ -50,7 +50,7 @@
                         <form action="{{ route('peminjaman.destroy', $data->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning btn-small">Edit</a>
+                            <a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-secondary btn-small">Edit</a>
                             {{--  cb --}}
                         </form>
                     </td>

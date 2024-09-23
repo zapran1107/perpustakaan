@@ -34,7 +34,7 @@
                                 <h2 class="mb-0">{{ $peminjaman }} Data</h2>
 
                             </div>
-                            <a href="{{ route('pengembalian.index') }}" class="btn btn-primary btn-sm mt-2">Lihat</a>
+                            <a href="{{ route('dashboarduser') }}" class="btn btn-primary btn-sm mt-2">Lihat</a>
 
                         </div>
                         <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
@@ -82,7 +82,7 @@
                         </p>
                     </div>
                 </div>
-            </div> 
+            </div>
 
         {{-- <div class="col-sm-4 grid-margin">
             <div class="card">

@@ -28,7 +28,7 @@
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
       <div class="sidebar-content">
         <ul class="nav nav-secondary">
-          <li class="nav-item active">
+          <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('home')}}">
                 <i class="fa fa-th-large" style="font-size:25px;"></i>
                 <P>DASHBOARD</P>
@@ -69,6 +69,14 @@
                               <p>PENGAJUAN PEMINJAMAN</p>
                             </a>
                         </li>
+
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="">
+                                <i class="fa fa-file-text-o" style="font-size:25px;"></i>
+                              <p>USER</p>
+                            </a>
+                        </li>
+
                              <div class="collapse" id="submenu">
                                  <ul class="nav nav-collapse">
                                 <li>

@@ -4,16 +4,15 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8" style="padding-top: 100px">
+                @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success')}}
+                </div>
+                @endif
                 <div class="card">
                     <div class="card-header"> {{ __('DATA KATEGORI') }} </div>
-
                     <div class="card-body">
                         <a href="{{ route('kategori.create') }}" class="btn btn-primary">tambah data</a>
-                        @if (session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
-                        @endif
                         <table class="table" id="example2">
                             <thead>
                                 <tr>
@@ -33,7 +32,7 @@
                                             @method('DELETE')
                                             <td>
                                                 <a href="{{ route('kategori.edit', $data->id) }}"
-                                                    class="btn btn-success">edit</a>
+                                                    class="btn btn-secondary">edit</a>
                                                 <button type="submit" class="btn btn-danger">hapus</button>
                                             </td>
                                         </form>

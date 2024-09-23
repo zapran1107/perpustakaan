@@ -37,8 +37,6 @@
                     </form>
                 </div>
             </div>
-
-
             <a href="{{ route('peminjaman.index') }}" class="btn btn-primary">Kembali</a>
         </div>
     </div>
