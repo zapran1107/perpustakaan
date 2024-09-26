@@ -30,7 +30,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('dashboarduser')}}">
                 <i class="fa fa-th-large" style="font-size:25px;"></i>
-                <P>DASHBOARD</P>
+                <P>DASHBOARD USER</P>
             </a>
 
           </li>

@@ -31,7 +31,7 @@
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('home')}}">
                 <i class="fa fa-th-large" style="font-size:25px;"></i>
-                <P>DASHBOARD</P>
+                <P>DASHBOARD ADMIN</P>
             </a>
 
           </li>
@@ -71,8 +71,8 @@
                         </li>
 
                         <li class="nav-item menu-items">
-                            <a class="nav-link" href="">
-                                <i class="fa fa-file-text-o" style="font-size:25px;"></i>
+                            <a class="nav-link" href="{{route('user.index')}}">
+                                <i class="fa fa-user-circle" style="font-size:25px"></i>
                               <p>USER</p>
                             </a>
                         </li>

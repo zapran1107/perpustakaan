@@ -16,7 +16,8 @@
                                 </div>
                                 <div class="col col-stats ms-3 ms-sm-0">
                                     <div class="numbers">
-                                        <p class="card-category">buku</p>
+                                        <i class="fa fa-book" style="font-size:25px"></i>
+                                        <p class="card-category">BUKU</p>
                                         {{ $jumlahbuku }}
                                     </div>
                                 </div>
@@ -35,7 +36,8 @@
                                 </div>
                                 <div class="col col-stats ms-3 ms-sm-0">
                                     <div class="numbers">
-                                        <p class="card-category">kategori</p>
+                                        <i class="fa fa-list-alt" style="font-size:25px;"></i>
+                                        <p class="card-category">KATEGORI</p>
                                         {{ $jumlahkategori }}
                                     </div>
                                 </div>
@@ -54,7 +56,8 @@
                                 </div>
                                 <div class="col col-stats ms-3 ms-sm-0">
                                     <div class="numbers">
-                                        <p class="card-category">penerbit</p>
+                                        <i class="fa fa-address-book-o" style="font-size:25px"></i>
+                                        <p class="card-category">PENERBIT</p>
                                         {{ $jumlahpenerbit }}
                                     </div>
                                 </div>
@@ -73,7 +76,8 @@
                                 </div>
                                 <div class="col col-stats ms-3 ms-sm-0">
                                     <div class="numbers">
-                                        <p class="card-category">penulis</p>
+                                        <i class="fa fa-edit" style="font-size:25px"></i>
+                                        <p class="card-category">PENULIS</p>
                                         {{ $jumlahpenulis }}
                                     </div>
                                 </div>

@@ -20,11 +20,19 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $users = User::orderBy('id', 'desc')->get();
-        $user = Auth::user();
-        return view('admin.user.index', ['user' => $user], compact('users'));
-    }
+{
+    // Mengambil semua pengguna dan mengurutkannya berdasarkan ID
+    $users = User::orderBy('id', 'desc')->get();
+
+    // Mengambil pengguna yang terautentikasi
+    $authUser = Auth::user();
+
+    return view('admin.user.index', [
+        'users' => $users, // Mengirim daftar pengguna
+        'authUser' => $authUser // Mengirim pengguna yang terautentikasi
+    ]);
+}
+
 
     /**
      * Show the form for creating a new resource.
@@ -71,7 +79,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('user.index')->with('success', 'berhasil didaftarkan');
+        return redirect()->route('admin.user.index')->with('success', 'berhasil didaftarkan');
     }
 
     /**
@@ -128,7 +136,7 @@ class UserController extends Controller
         if ($request->has('redirect_to') && $request->redirect_to === 'profile') {
             return redirect()->route('profile')->with('success', 'Profil berhasil diperbarui');
         } else {
-            return redirect()->route('user.index')->with('success', 'Data berhasil diperbarui');
+            return redirect()->route('admin.user.index')->with('success', 'Data berhasil diperbarui');
         }
     }
 
@@ -141,6 +149,6 @@ class UserController extends Controller
             $user->delete();
             return redirect()->route('user.index');
         }
-        return redirect()->route('user.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('admin.user.index')->with('success', 'Data berhasil dihapus');
     }
 }

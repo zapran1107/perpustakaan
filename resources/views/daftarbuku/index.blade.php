@@ -1,3 +1,4 @@
+<title>Daftar Buku-Bashoard User</title>
 @extends('layouts.profileuser')
 @section('content')
 

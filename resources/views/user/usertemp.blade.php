@@ -3,16 +3,14 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>perpustakaan</title>
+    <title>Dashboard User</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
        />
     <link
       rel="icon"
-      href="{{asset('assets/img/smk assalaam.png') }}"
-      type="image/x-icon"
-    />
+      href="{{asset('frontend/assets/img/smk assalaam.png') }}"/>
 
     <!-- Fonts and icons -->
     <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js') }}"></script>

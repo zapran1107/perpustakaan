@@ -1,3 +1,4 @@
+<title>Penerbit-Bashoard Admin</title>
 @extends('layouts.backend')
 
 @section('content')
@@ -16,24 +17,24 @@
                     <a href="{{ route('penerbit.create') }}" class="btn btn-primary">tambah data</a>
                 <table class="table" id="example2">
             <thead>
-                <tr>
+                <tr class="text-center">
                 <th scope="col">NO</th>
                 <th scope="col">NAMA</th>
                 <th scope="col">ALAMAT</th>
-                <th scope="col"><center>AKSI</center></th>
+                <th scope="col">AKSI</th>
                  </tr>
                 </thead>
                 <tbody>
                     @php $no = 1; @endphp
                     @foreach ($penerbit as $data)
-              <tr>
+              <tr class="text-center">
                <th scope="row">{{ $no++ }}</th>
                <td>{{ $data->nama_penerbit }}</td>
                <td>{{ $data->alamat }}</td>
                <form action="{{route('penerbit.destroy', $data->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
-               <td>
+               <td class="text-center">
                 <a href="{{ route('penerbit.edit', $data->id) }}" class="btn btn-secondary">edit</a>
                 <button type="submit" class="btn btn-danger">hapus</button>
                </td>

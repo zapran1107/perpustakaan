@@ -1,3 +1,4 @@
+<title>Kategori-Bashoard Admin</title>
 @extends('layouts.backend')
 
 @section('content')
@@ -15,7 +16,7 @@
                         <a href="{{ route('kategori.create') }}" class="btn btn-primary">tambah data</a>
                         <table class="table" id="example2">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th scope="col">NO</th>
                                     <th scope="col">NAMA KATEGORI</th>
                                     <th  scope="col">AKSI</th>
@@ -24,13 +25,13 @@
                             <tbody>
                                 @php $no = 1; @endphp
                                 @foreach ($kategori as $data)
-                                    <tr>
-                                        <th scope="row">{{ $no++ }}</th>
+                                    <tr class="text-center">
+                                        <th scope="row" >{{ $no++ }}</th>
                                         <td>{{ $data->nama_kategori }}</td>
                                         <form action="{{ route('kategori.destroy', $data->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="{{ route('kategori.edit', $data->id) }}"
                                                     class="btn btn-secondary">edit</a>
                                                 <button type="submit" class="btn btn-danger">hapus</button>

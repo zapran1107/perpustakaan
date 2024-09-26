@@ -1,3 +1,4 @@
+<title>Pengajuan Peminjaman-Dashboard Admin</title>
 @extends('layouts.backend')
 @section('content')
 <h3 class="mb-0 text-uppercase pb-3">PINJAMAN BUKU</h3>
@@ -13,22 +14,22 @@
         {{-- <a href="{{ route('peminjaman.create') }}" class="btn btn-grd btn-primary px-5 mb-2">Tambah Data Peminjaman</a> --}}
         <table class="table mb-0 table-striped" id="example2">
             <thead>
-                <tr>
+                <tr class="text-center">
                     <th scope="col">NO</th>
                     <th scope="col">NAMA BUKU</th>
                     <th scope="col">NAMA PEMINJAM</th>
-                    <th scope="col">JUMLAH</th>
+                    <th scope="col">JUMLAH BUKU</th>
                     <th scope="col">TANGGAL PEMINJAMAN</th>
                     <th scope="col">BATAS PEMINJAMAN</th>
                     <th scope="col">TANGGAL PENGEMBALIAN</th>
-                    <th scope="col"><center>AKSI</center></th>
+                    <th scope="col">AKSI</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($peminjaman as $data)
-                <tr>
+                <tr class="text-center">
                     <th scope="row">{{ $loop->index+1 }}</th>
-                    <td>{{ $data->judul}}</td>
+                    <td>{{ $data->buku->judul}}</td>
                     <td>{{ $data->nama_peminjam}}</td>
                     <td>{{ $data->jumlah }}</td>
                     <td>{{ $data->tanggal_pinjam }}</td>
@@ -41,7 +42,7 @@
                         <p class="dash-lable mb-0 bg-danger bg-opacity-10 rounded-2">di pinjam</p>
                         @endif
                     </td> --}}
-                        <td>
+                        <td class="text-center">
                             <a href="{{ route('peminjamanadmin.detail', $data->id) }}" class="btn btn-info btn-sm">Lihat
                                 Detail</a>
                         </td>

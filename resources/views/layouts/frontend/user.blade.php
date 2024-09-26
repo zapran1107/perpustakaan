@@ -7,6 +7,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+        <link rel="icon" href="{{asset('frontend/assets/img/smk assalaam.png') }}"/>
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="{{asset ('User/assets/https://fonts.googleapis.com')}}">
