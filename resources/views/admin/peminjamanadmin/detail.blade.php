@@ -25,19 +25,23 @@
             </div>
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <strong>Status:</strong>
-                    <form action="{{ route('peminjaman.update', $peminjaman->id) }}" method="POST">
+                    <form action="{{ route('peminjaman.update', $peminjaman->id) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('PUT')
-                        <select name="status" class="form-control" onchange="this.form.submit()" style="color: black">
+                        {{-- <select name="status" class="form-control" style="color: black">
                             <option value="ditahan" {{ $peminjaman->status == 'ditahan' ? 'selected' : '' }}>Ditahan</option>
                             <option value="ditolak" {{ $peminjaman->status == 'ditolak' ? 'selected' : '' }}>Ditolak</option>
                             <option value="diterima" {{ $peminjaman->status == 'diterima' ? 'selected' : '' }}>Diterima</option>
-                        </select>
+                        </select> --}}
+                        {{-- <button type="submit" name="status" class="btn btn-success btn-sm">Terima</button> --}}
+                        <button type="submit" name="status" value="diterima" class="btn btn-success btn-sm">Terima</button>
+                        <button type="submit" name="status" value="ditolak" class="btn btn-danger btn-sm">Tolak</button>
+                        <button type="submit" name="status" value="ditahan" class="btn btn-warning btn-sm">Tahan</button>
                     </form>
                 </div>
             </div>
-            <a href="{{ route('peminjaman.index') }}" class="btn btn-primary">Kembali</a>
+            {{-- <a href="{{ route('peminjaman.edit', $peminjaman->id) }}" class="btn btn-warning">Edit</a>
+            <a href="{{ route('peminjamanadmin.admin') }}" class="btn btn-primary">Kembali</a> --}}
         </div>
     </div>
 @endsection

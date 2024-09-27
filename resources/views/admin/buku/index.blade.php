@@ -1,4 +1,4 @@
-<title>Buku-Bashoard Admin</title>
+<title>Buku-Dashboard Admin</title>
 @extends('layouts.backend')
 
 @section('content')

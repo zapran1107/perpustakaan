@@ -1,4 +1,4 @@
-<title>Penulis-Bashoard Admin</title>
+<title>Penulis-Dashboard Admin</title>
 @extends('layouts.backend')
 
 @section('content')

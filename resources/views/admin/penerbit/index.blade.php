@@ -1,4 +1,4 @@
-<title>Penerbit-Bashoard Admin</title>
+<title>Penerbit-Bashboard Admin</title>
 @extends('layouts.backend')
 
 @section('content')

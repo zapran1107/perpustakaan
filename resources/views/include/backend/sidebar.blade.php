@@ -33,13 +33,23 @@
                 <i class="fa fa-th-large" style="font-size:25px;"></i>
                 <P>DASHBOARD ADMIN</P>
             </a>
-
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="{{route('user.index')}}">
+                    <i class="fa fa-user-circle" style="font-size:25px"></i>
+                  <p>USER</p>
+                </a>
+            </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link">
+                    <p>TABEL</p>
+                </a>
+            </li>
           </li>
-          <li class="nav-section">
+          {{-- <li class="nav-section">
             <span class="sidebar-mini-icon">
                 <i class="fa fa-ellipsis-h"></i>
             </span>
-          </li>
+          </li> --}}
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('penulis.index')}}">
                 <i class="fa fa-edit" style="font-size:25px"></i>
@@ -48,7 +58,7 @@
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{route ('penerbit.index')}}">
-                <i class="fa fa-address-book-o" style="font-size:25px"></i>
+                <i class="fa fa-file-powerpoint-o" style="font-size:25px"></i>
                       <p>PENERBIT</p>
                     </a>
                     <li class="nav-item menu-items">
@@ -64,19 +74,16 @@
                             </a>
                         </li>
                         <li class="nav-item menu-items">
+                            <a class="nav-link">
+                                <p>PENGAJUAN</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-items">
                             <a class="nav-link" href="{{route ('peminjamanadmin.admin')}}">
-                                <i class="fa fa-file-text-o" style="font-size:25px;"></i>
+                                <i class="fa fa-envelope-o" style="font-size:25px"></i>
                               <p>PENGAJUAN PEMINJAMAN</p>
                             </a>
                         </li>
-
-                        <li class="nav-item menu-items">
-                            <a class="nav-link" href="{{route('user.index')}}">
-                                <i class="fa fa-user-circle" style="font-size:25px"></i>
-                              <p>USER</p>
-                            </a>
-                        </li>
-
                              <div class="collapse" id="submenu">
                                  <ul class="nav nav-collapse">
                                 <li>

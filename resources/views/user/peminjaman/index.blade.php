@@ -1,4 +1,4 @@
-<title>Peminjaman-Dahboard User</title>
+<title>Peminjaman-Dashboard User</title>
 @extends('layouts.profileuser')
 @section('content')
 <h3 class="mb-0 text-uppercase pb-3">PINJAMAN BUKU</h3>

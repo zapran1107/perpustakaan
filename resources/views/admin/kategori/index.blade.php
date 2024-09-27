@@ -1,4 +1,4 @@
-<title>Kategori-Bashoard Admin</title>
+<title>Kategori-Dashboard Admin</title>
 @extends('layouts.backend')
 
 @section('content')
