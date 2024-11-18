@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+{{-- @extends('layouts.backend')
 @section('content')
     <div class="container">
         <div class="page-inner">
@@ -11,7 +11,7 @@
                             <div class="row">
                                 <div class="col-icon">
                                     <div class="icon-big text-center icon-primary bubble-shadow-small">
-                                        <i class="fas fa-users"></i>
+                                        <i class="fa fa-book" style="font-size:25px"></i>
                                     </div>
                                 </div>
                                 <div class="col col-stats ms-3 ms-sm-0">
@@ -88,4 +88,4 @@
             </div>
         </div>
     </div>
-        @endsection
+@endsection --}}

@@ -4,10 +4,10 @@
     <div class="card">
         <div class="card-body p-4">
             <h5 class="mb-4">Edit User {{ $user->name }}</h5>
-            <form class="row g-3" method="POST" action="{{ route('user.update', $user->id) }}" enctype="multipart/form-data">
-                @method('PATCH')
+            <form class="row g-3" action="{{ route('user.update', $user->id) }}" method="POST"  enctype="multipart/form-data">
+                @method('patch')
                 @csrf
-                <div class="col-md-4x">
+                <div class="col-md-4">
                     <label for="input13" class="form-label">Nama</label>
                     <div class="position-relative">
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="input13" value="{{ $user->name }}" placeholder="Full Name" required>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4x">
+                <div class="col-md-4">
                     <label for="input13" class="form-label">Foto Profile</label>
                     <div class="position-relative">
                         <img src="{{ asset('images/user/' . $user->fotoprofile) }}" class="rounded-circle p-1 border mb-4" width="80" height="80" alt="">
@@ -28,18 +28,18 @@
                     </div>
                 </div>
 
-                <div class="col-md-4x">
+                <div class="col-md-6">
                     <label for="input13" class="form-label">Nomer telepon</label>
                     <div class="position-relative">
                         <input class="form-control mb-3" type="number" name="no_hp" placeholder="Nama Penulis" value="{{ $user->no_hp }}" required>
                     </div>
                 </div>
 
-                <div class="col-md-4x">
+                <div class="col-md-6">
                     <label for="input13" class="form-label">Alamat</label>
                     <div class="position-relative">
                         {{-- <textarea class="form-control mb-3" name="deskripsi" required> {{$buku->deskripsi}}</textarea> --}}
-                        <textarea class="form-control mb-3" type="text" name="alamat" placeholder="Alamat" required>{{$user->alamat}}</textarea>
+                        <textarea class="form-control mb-3" type="text" name="address" placeholder="address" required>{{$user->address}}</textarea>
                     </div>
                 </div>
 
@@ -63,10 +63,10 @@
                         <option value="1">Admin</option>
                     </select>
                 </div> --}}
-                <div class="col-md-12">
+                <div class="col-md-12 mt-3">
                     <div class="d-md-flex d-grid align-items-center gap-3">
-                        <a href="{{route('user.index')}}" class="btn btn-danger px-4">Cancel</a>
-                        <button type="submit" class="btn btn-primary px-4">Submit</button>
+                        <button type="submit" class="btn btn-success px-4 mr-3">Submit</button>
+                        <a type="submit" href="{{route('user.index')}}" class="btn btn-danger">Cancel</a>
                     </div>
                 </div>
             </form>

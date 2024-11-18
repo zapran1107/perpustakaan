@@ -140,12 +140,12 @@
                                         class="col-md-12 col-form-label text-md-end">{{ __('Alamat') }}</label>
 
                                     <div class="col-md-12">
-                                        <input id="alamat" type="text"
-                                            class="form-control @error('alamat') is-invalid @enderror" name="alamat"
-                                            value="{{ old('alamat') }}" required autocomplete="alamat" autofocus
+                                        <input id="address" type="text"
+                                            class="form-control @error('address') is-invalid @enderror" name="address"
+                                            value="{{ old('address') }}"     autocomplete="address" autofocus
                                             placeholder="Alamat Rumah">
 
-                                        @error('alamat')
+                                        @error('address')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

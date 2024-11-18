@@ -13,7 +13,6 @@
                 <a class="btn btn-light rounded-pill py-2 px-2 px-md-3 me-1 mt-3" href="{{ route('login') }}">Login</a>
                 <a class="btn btn-primary rounded-pill py-2 px-2 px-md-3 ms-1 mt-3" href="{{ route('register') }}">Register</a>
             </div>
-
             @endguest
 
             <div class="search-bar flex-grow-1">

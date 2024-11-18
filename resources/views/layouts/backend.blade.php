@@ -41,6 +41,8 @@
     <link href="{{asset('assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
 
 
+
+
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
   </head>
@@ -90,94 +92,7 @@
                     </div>
                 </div>
                   </div>
-
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div class="card card-round">
-                        <div class="card-header">
-                          <div class="card-head-row">
-                            <div class="card-title">User Statistics</div>
-                            <div class="card-tools">
-                              <a
-                                href="#"
-                                class="btn btn-label-success btn-round btn-sm me-2"
-                              >
-                                <span class="btn-label">
-                                  <i class="fa fa-pencil"></i>
-                                </span>
-                                Export
-                              </a>
-                              <a href="#" class="btn btn-label-info btn-round btn-sm">
-                                <span class="btn-label">
-                                  <i class="fa fa-print"></i>
-                                </span>
-                                Print
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <div class="chart-container" style="min-height: 375px">
-                            <canvas id="statisticsChart"></canvas>
-                          </div>
-                          <div id="myChartLegend"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card card-primary card-round">
-                        <div class="card-header">
-                          <div class="card-head-row">
-                            <div class="card-title">Daily Sales</div>
-                            <div class="card-tools">
-                              <div class="dropdown">
-                                <button
-                                  class="btn btn-sm btn-label-light dropdown-toggle"
-                                  type="button"
-                                  id="dropdownMenuButton"
-                                  data-bs-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  Export
-                                </button>
-                                <div
-                                  class="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton"
-                                >
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#"
-                                    >Something else here</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card-category">March 25 - April 02</div>
-                        </div>
-                        <div class="card-body pb-0">
-                          <div class="mb-4 mt-2">
-                            <h1>$4,578.58</h1>
-                          </div>
-                          <div class="pull-in">
-                            <canvas id="dailySalesChart"></canvas>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card card-round">
-                        <div class="card-body pb-0">
-                          <div class="h1 fw-bold float-end text-primary">+5%</div>
-                          <h2 class="mb-2">17</h2>
-                          <p class="text-muted">Users online</p>
-                          <div class="pull-in sparkline-fix">
-                            <div id="lineChart"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
+                  
             </main>
         {{-- akhir main content --}}
             {{-- footer --}}
@@ -426,16 +341,42 @@
     </script>
     <script>
         $(document).ready(function() {
-            var table = $('#example2').DataTable({
-                lengthChange: false
-                , buttons: [ 'excel', 'pdf', 'print']
+            $('#example2').DataTable({
+                dom: '<"row"<"col-sm-6"B><"col-sm-6"f>>' +
+                    '<"row"<"col-sm-12"tr>>' +
+                    '<"row"<"col-sm-5"i><"col-sm-7"p>>',
+                buttons: [{
+                        extend: 'pdf',
+                        text: '<i class="bi bi-file-earmark-pdf"></i> PDF',
+                        className: 'btn btn-danger',
+                        titleAttr: 'Export PDF',
+                        exportOptions: {
+                            columns: [0, 1, 2, 3, 4, 5]
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        text: '<i class="bi bi-file-earmark-excel"></i> Excel',
+                        className: 'btn btn-success',
+                        titleAttr: 'Export Excel',
+                        exportOptions: {
+                            columns: [0, 1, 2, 3, 4, 5]
+                        }
+                    },
+                ],
+                language: {
+                    search: "Mencari:", // Translations
+                    lengthMenu: "Tampilkan _MENU_ entri",
+                    info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+                    infoEmpty: "Menampilkan 0 sampai 0 dari 0 entri",
+                    infoFiltered: "(difilter dari _MAX_ total entri)",
+                    zeroRecords: "Tidak ada data yang cocok",
+                    emptyTable: "Tidak ada data tersedia dalam tabel",
+                }
             });
-
-            table.buttons().container()
-                .appendTo('#example2_wrapper .col-md-6:eq(0)');
         });
-
     </script>
+
 
 
     // <!-- Kaiadmin DEMO methods, don't include it in your project! -->

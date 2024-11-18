@@ -12,6 +12,7 @@
         </div>
         @endif
         {{-- <a href="{{ route('peminjaman.create') }}" class="btn btn-grd btn-primary px-5 mb-2">Tambah Data Peminjaman</a> --}}
+        <div class="table-responsive">
         <table class="table mb-0 table-striped" id="example2">
             <thead>
                 <tr class="text-center">
@@ -58,6 +59,7 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
     </div>
 </div>
 </div>

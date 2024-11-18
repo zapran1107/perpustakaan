@@ -51,7 +51,7 @@ class UserController extends Controller
         $request->validate(
             [
                 'name' => ['required', 'string', 'max:255'],
-                'alamat' => ['required', 'string', 'max:255'],
+                'address' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                 'password' => ['required', 'string', 'min:8', 'confirmed'],
             ],
@@ -63,7 +63,7 @@ class UserController extends Controller
 
         $user = new User();
         $user->name = $request->name;
-        $user->alamat = $request->alamat;
+        $user->address = $request->address;
         $user->no_hp = $request->no_hp;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
@@ -107,6 +107,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'string',
@@ -118,7 +119,7 @@ class UserController extends Controller
         ]);
 
         $user->name = $request->name;
-        $user->alamat = $request->alamat;
+        $user->address = $request->address;
         $user->no_hp = $request->no_hp;
         $user->email = $request->email;
         // $user->isAdmin = $request->isAdmin;
@@ -136,7 +137,7 @@ class UserController extends Controller
         if ($request->has('redirect_to') && $request->redirect_to === 'profile') {
             return redirect()->route('profile')->with('success', 'Profil berhasil diperbarui');
         } else {
-            return redirect()->route('admin.user.index')->with('success', 'Data berhasil diperbarui');
+            return redirect()->route('user.index')->with('success', 'Data berhasil diperbarui');
         }
     }
 

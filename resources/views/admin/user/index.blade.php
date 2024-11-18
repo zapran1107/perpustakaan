@@ -4,8 +4,9 @@
 <h3 class="m-3 text-uppercase">ACCESS CONTROLL LIST</h3>
 <hr>
     <div class="card" >
-        <div class="card-body" >
-            <table class="table mb-0 table-striped" id="example" >
+        <div class="card-body">
+            <div class="table-responsive">
+            <table class="table mb-0 table-striped" id="example2" >
                 <thead>
                     <tr>
                         <th scope="col">No</th>
@@ -30,9 +31,9 @@
                                     style="object-fit: cover;" alt="">
                             </td>
                             <td class="text-center">
-                                {{-- <a href="{{ route('user.edit', $item->id) }}"><button type="button"
+                                <a href="{{ route('user.edit', $item->id) }}"><button type="button"
                                         class="btn btn-primary m-1" item-bs-toggle="tooltip" data-bs-placement="left"
-                                        title="Editing User"><i class="ti ti-edit">Edit</i></button></a> --}}
+                                        title="Editing User"><i class="ti ti-edit">Edit</i></button></a>
                                 {{-- <a href="{{ route('user.show', $item->id) }}"><button type="button"
                                         class="btn btn-secondary m-1" item-bs-toggle="tooltip" data-bs-placement="left"
                                         title="User Detail"><i class="ti ti-eye">Lihat</i></button></a>
@@ -54,6 +55,7 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
         </div>
     </div>
 @endsection

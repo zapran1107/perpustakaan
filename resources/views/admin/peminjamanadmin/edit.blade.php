@@ -60,7 +60,7 @@
                 <div class="col-md-12 mb-3">
                     <label for="status" class="form-label">Status</label>
                     <select name="status" class="form-control">
-                        <option value="ditahan" {{ $minjem->status == 'ditahan' ? 'selected' : '' }}>Ditahan</option>
+                        {{-- <option value="ditahan" {{ $minjem->status == 'ditahan' ? 'selected' : '' }}>Ditahan</option> --}}
                         <option value="diterima" {{ $minjem->status == 'diterima' ? 'selected' : '' }}>Diterima</option>
                         <option value="ditolak" {{ $minjem->status == 'ditolak' ? 'selected' : '' }}>Ditolak</option>
                         <option value="Dipinjam" {{ $minjem->status == 'Dipinjam' ? 'selected' : '' }}>Dipinjam</option>

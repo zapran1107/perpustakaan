@@ -42,4 +42,5 @@ class HomeController extends Controller
             'penminjaman' => $peminjaman,
         ]);
     }
+    
 }
